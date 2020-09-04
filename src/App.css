@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Markazi+Text|Oswald:400');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+#app {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  padding: 20px 20px 20px 20px;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+#title p {
+  font-size: 1em;
+  font-weight: 800;
+}
+
+nav {
+  flex: 2;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0px 12px 0 12px;
+}
+
+nav ul li div {
+  position: relative;
+}
+
+nav ul li div p {
+  padding: 6px 0 6px 0;
+}
+
+nav ul li div p:after {
+  content: "";
+  position: absolute;
+  left:0;
+  top: 100%;
+  width: 0;
+  height: 3px;
+  background-color: #2BBFBD;
+  transition: width .2s ease-in-out;
+}
+
+.nav-text:hover {
+  cursor: pointer;
+}
+
+.nav-text:hover:after {
+  width: 100%;
+}
+
+#subtitle {
+  display: flex;
+  align-items: center;
+  margin: 192px auto;
+  justify-content: center;
+  padding: 0 22px 0 22px;
+}
+
+#subtitle h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 2.4em;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 22px 0 22px;
+}
+
+#projects-text {
+  margin-bottom: 96px;
+}
+
+#projects-text::after, #contact-text::after {
+  display: block;
+  margin: 0 auto;
+  content: "";
+  margin-top: 30px;
+  border: 4px solid #2BBFBD;
+  width: 60%;
+}
+
+#about {
+  padding: 0 22px 0 22px;
+}
+
+#about ul {
+  margin: 0;
+  padding: 0;
+}
+
+.years {
+  font-weight: 700;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 144px 0 24px 0;
+}
+
+i {
+  padding: 0 12px 0 12px;
+}
+
+@media only screen and (max-width: 813px) {
+  #subtitle {
+    margin: 112px auto;
+  }
+
+  #projects-text {
+    margin-bottom: 56px;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  #subtitle h1 {
+    font-size: 2em;
+  }
+}
