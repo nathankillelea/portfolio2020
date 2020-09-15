@@ -4,6 +4,10 @@
   "private": true,
   "homepage": "https://nathankillelea.github.io/portfolio",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "ajv": "^6.5.2",
     "font-awesome": "^4.7.0",
     "react": "^16.4.1",
