@@ -1,0 +1,30 @@
+.card #img {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 788px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.12);
+  margin-bottom: 24px;
+  transition: transform .2s ease-in-out;
+}
+
+.card:hover #img {
+  transform: scale(1.02);
+  opacity: 0.5;
+}
+
+.card:nth-last-child(1) {
+  margin-bottom: 0px;
+}
+
+#img {
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
