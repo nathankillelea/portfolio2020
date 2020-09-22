@@ -1,0 +1,48 @@
+#footer p::selection {
+  color: #292929;
+  background: #fdfdfd;
+}
+
+#footer {
+  background-color: #292929;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 100px 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  font-size: 1.6em;
+  color: #fdfdfd;
+}
+
+.iconItem {
+  margin-right: 24px;
+}
+
+.iconItem:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+#github:hover {
+  color: #333333;
+}
+
+#linkedin:hover {
+  color: #0e76a8;
+}
+
+#codepen:hover {
+  color: #FCD000;
+}
+
+#copyrightText {
+  color:#fdfdfd;
+  padding-top: 12px;
+}
