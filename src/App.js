@@ -33,39 +33,42 @@ function App() {
   });
   */
 
+  const props = useSpring({
+    from: {position: 'fixed', top: 0, left: 0, width: '0%', height: '100%', backgroundColor: 'blue', zIndex: 2},
+    to: {position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'blue', zIndex: 2}
+  })
+
   // need to have this somehow transition to like a single color screen, then transiton from that to the route, also scroll up to top of page before u actually change route?
   //const transitionRef = useRef();
   const transitions = useTransition(location, location => location.pathname, {
     /*ref: transitionRef,*/
     initial: null,
-    from: {transform: 'translate3d(100%,0,0)'},
-    enter: {transform: 'translate3d(0%,0,0)'},
-    leave: {transform: 'translate3d(-100%,0,0)'},
+    from: {opacity: 0},
+    enter: {opacity: 1},
+    leave: {opacity: 0},
   });
 
+  // maybe make a hidden fullscreen page that is visible during transition? or something like that
+
   //useChain([springRef, transitionRef], [0, 0])
+  //visibility: 'hidden', position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'blue', zIndex: 2
 
   return (
     <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+      <animated.div style={{}} />
       <Header />
       <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
-      {
-        transitions.map(({ item: location, props, key }) => (
-          <animated.div style={props} key={key}>
-            <Switch location={location}>
-              <Route exact path='/' component={Home}/>
-              <Route path='/projects' component={Projects} />
-              <Route path='/about' component={About} />
-              <Route path='/illini-events' component={IlliniEvents} />
-              <Route path='/emmys-doodles' component={EmmysDoodles} />
-              <Route path='/browser-game' component={BrowserGame} />
-              <Route path='/message-in-a-bottle' component={MessageInABottle} />
-              <Route path='/fanchat' component={Fanchat} />
-              <Route render={() => <Redirect to={{pathname: "/"}} />} />
-            </Switch>
-          </animated.div>
-        ))
-      }
+        <Switch location={location}>
+          <Route exact path='/' component={Home}/>
+          <Route path='/about' component={About} />
+          <Route path='/projects' component={Projects} />
+          <Route path='/illini-events' component={IlliniEvents} />
+          <Route path='/emmys-doodles' component={EmmysDoodles} />
+          <Route path='/browser-game' component={BrowserGame} />
+          <Route path='/message-in-a-bottle' component={MessageInABottle} />
+          <Route path='/fanchat' component={Fanchat} />
+          <Route render={() => <Redirect to={{pathname: "/"}} />} />
+        </Switch>
       </div>
       <Footer />
     </div>
