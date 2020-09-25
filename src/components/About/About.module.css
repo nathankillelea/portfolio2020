@@ -4,5 +4,19 @@
 }
 
 #img {
+  max-width: 100%;
+  height: auto;
   border-radius: 195px;
+  margin: 0 22px 0 22px;
+}
+
+#headerContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+#aboutContainer {
+  margin: 0 22px 0 22px;
+  font-family: 'Markazi Text', serif;
+  font-size: 3em;
 }

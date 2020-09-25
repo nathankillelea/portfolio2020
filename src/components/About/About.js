@@ -9,8 +9,10 @@ class About extends Component {
     return (
       <div id={SharedStyles.container}>
         <div id={styles.body}>
-          <h2>About</h2>
-          <img src='../../assets/nathan_killelea.jpg' id={styles.img} />
+          <div id={styles.headerContainer}>
+            <img src='../../assets/nathan_killelea.jpg' id={styles.img} />
+            <h1 id={styles.aboutContainer}>Hey, I'm Nathan Killelea.</h1>
+          </div>
         </div>
       </div>
     );

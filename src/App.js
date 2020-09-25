@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   Switch,
   Route,
@@ -53,10 +53,12 @@ function App() {
   //useChain([springRef, transitionRef], [0, 0])
   //visibility: 'hidden', position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'blue', zIndex: 2
 
+  const content = useRef();
+
   return (
-    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
-      <animated.div style={{}} />
-      <Header />
+    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}} ref={content}>
+      <animated.div />
+      <Header content={content} />
       <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
         <Switch location={location}>
           <Route exact path='/' component={Home}/>

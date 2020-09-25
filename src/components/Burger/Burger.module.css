@@ -1,0 +1,16 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
+  width: 100%;
+  align-items: center;
+}
+
+.navItem {
+  text-align: center;
+}
+
+.navText {
+}
