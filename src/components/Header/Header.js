@@ -15,13 +15,18 @@ import { animated, useSpring, useTransition, useChain } from 'react-spring';
 // MAYBE I PUT THE USE STATE OPEN SHIT ON APP, THEN I CAN INTERPOLATE THE CONTENT DOWN AS WELL ON PRESS ??????
 
 
-const Header = ({content}) => {
+const Header = ({content, open, setOpen, burgerHeight, setHeight}) => {
   const width = useWindowWidth();
-  const [open, setOpen] = useState(false);
-  const node = useRef();
+  const node = useRef(null);
   useOnClickOutside(node, () => setOpen(false));
-
+  const burgerRef = useRef(null);
   const props = useSpring({y: open ? 0 : 100});
+
+  useEffect(() => {
+    if(open) {
+      setHeight(burgerRef.current.clientHeight);
+    }
+  });
 
   return (
     <div ref={node}>
@@ -53,8 +58,9 @@ const Header = ({content}) => {
       <animated.div
         style={{
           transform: props.y
-          .interpolate(y => `translate3d(0, ${y*-1}%, 0)`)
+          .to(y => `translate3d(0, ${y*-1}%, 0)`)
         }}
+        ref={burgerRef}
       >
         <div id={styles.burgerContainer} >
           <ul>

@@ -19,6 +19,8 @@ import Fanchat from './components/Fanchat/Fanchat.js';
 import Header from './components/Header/Header.js';
 import Footer from './components/Footer/Footer.js';
 
+import SharedStyles from './components/SharedStyles.module.css';
+
 import './App.css';
 
 function App() {
@@ -54,23 +56,33 @@ function App() {
   //visibility: 'hidden', position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'blue', zIndex: 2
 
   const content = useRef();
-
+  const [open, setOpen] = useState(false);
+  const [burgerHeight, setHeight] = useState(0);
+  const burgerPush = useSpring({y: !open ? 0 : burgerHeight}); // NEED TO MAKE THIS WORK, NOT SURE HOW TO PUSH IT DOWN BY THE RIGHT AMOUNT OR WHATEVER?????????
+  console.log('height', burgerHeight);
+  // buggy when it first goes, NEED SOME WAY TO JUST GET HEIGHT AND KNOW IT FOR GOOD????????????????????? FLICKERS ON FIRST OPEN
+  // on close should also like slide back in 
   return (
     <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}} ref={content}>
       <animated.div />
-      <Header content={content} />
-      <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
-        <Switch location={location}>
-          <Route exact path='/' component={Home}/>
-          <Route path='/about' component={About} />
-          <Route path='/projects' component={Projects} />
-          <Route path='/illini-events' component={IlliniEvents} />
-          <Route path='/emmys-doodles' component={EmmysDoodles} />
-          <Route path='/browser-game' component={BrowserGame} />
-          <Route path='/message-in-a-bottle' component={MessageInABottle} />
-          <Route path='/fanchat' component={Fanchat} />
-          <Route render={() => <Redirect to={{pathname: "/"}} />} />
-        </Switch>
+      <Header content={content} open={open} setOpen={setOpen} burgerHeight={burgerHeight} setHeight={setHeight} />
+      <div style={open ? {flex: 1, marginTop: -1*burgerHeight} : {flex: 1}}>
+        <animated.div id={SharedStyles.contentContainer} style={{
+          transform: burgerPush.y
+          .to(y => `translate3d(0, ${y+'px'}, 0)`)
+        }}>
+          <Switch location={location}>
+            <Route exact path='/' component={Home}/>
+            <Route path='/about' component={About} />
+            <Route path='/projects' component={Projects} />
+            <Route path='/illini-events' component={IlliniEvents} />
+            <Route path='/emmys-doodles' component={EmmysDoodles} />
+            <Route path='/browser-game' component={BrowserGame} />
+            <Route path='/message-in-a-bottle' component={MessageInABottle} />
+            <Route path='/fanchat' component={Fanchat} />
+            <Route render={() => <Redirect to={{pathname: "/"}} />} />
+          </Switch>
+        </animated.div>
       </div>
       <Footer />
     </div>
