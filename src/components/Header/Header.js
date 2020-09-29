@@ -15,21 +15,23 @@ import { animated, useSpring, useTransition, useChain } from 'react-spring';
 // MAYBE I PUT THE USE STATE OPEN SHIT ON APP, THEN I CAN INTERPOLATE THE CONTENT DOWN AS WELL ON PRESS ??????
 
 
-const Header = ({content, open, setOpen, burgerHeight, setHeight}) => {
-  const width = useWindowWidth();
+const Header = ({content, open, setOpen, burgerHeight, setHeight, width}) => {
   const node = useRef(null);
   useOnClickOutside(node, () => setOpen(false));
   const burgerRef = useRef(null);
   const props = useSpring({y: open ? 0 : 100});
+  console.log('width', width);
 
   useEffect(() => {
-    if(open) {
+    if(width <= 600)
       setHeight(burgerRef.current.clientHeight);
-    }
   });
 
+  // maybe add width <=600 to the animated div rendering but it complicates some things..
+
+  // the marginbottom isnt working, is just getting set to 0
   return (
-    <div ref={node}>
+    <div ref={node} style={width > 600 ? {position: 'sticky', top: 0, width: '100%', zIndex: 100} : {position: 'sticky', top: 0, width: '100%', zIndex: 100, marginBottom: -1*burgerHeight}}>
       <div id={styles.headerContainer}>
         <header id={styles.header}>
         <div id={styles.title}>
@@ -53,7 +55,7 @@ const Header = ({content, open, setOpen, burgerHeight, setHeight}) => {
       </header>
     </div>
     {
-      open
+      width <= 600
       ?
       <animated.div
         style={{
@@ -62,7 +64,7 @@ const Header = ({content, open, setOpen, burgerHeight, setHeight}) => {
         }}
         ref={burgerRef}
       >
-        <div id={styles.burgerContainer} >
+        <div id={styles.burgerContainer}>
           <ul>
             <li className={styles.burgerNavItem}><Link to={'/about'} className={styles.burgerNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>About</Link></li>
             <li className={styles.burgerNavItem}><Link to={'/projects'} className={styles.burgerNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>Projects</Link></li>

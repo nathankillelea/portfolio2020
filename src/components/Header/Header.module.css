@@ -77,19 +77,21 @@
 }
 
 #burgerContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: yellow;
   width: 100%;
-  align-items: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,.12);
+  background-color: #ffffff;
+  text-align: center;
 }
 
-#burgerNavItem {
-
+.burgerNavItem {
+  padding-bottom: 12px;
 }
 
-#burgerNavText {
-  
+.burgerNavText {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.burgerNavText:hover {
+  color: #2BBFBD !important;
 }

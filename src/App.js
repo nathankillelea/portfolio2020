@@ -6,6 +6,7 @@ import {
   useLocation
 } from 'react-router-dom';
 import { animated, useSpring, useTransition, useChain } from 'react-spring';
+import { useWindowWidth } from '@react-hook/window-size'
 
 import Home from './components/Home/Home.js';
 import Projects from './components/Projects/Projects.js';
@@ -43,7 +44,6 @@ function App() {
   // need to have this somehow transition to like a single color screen, then transiton from that to the route, also scroll up to top of page before u actually change route?
   //const transitionRef = useRef();
   const transitions = useTransition(location, location => location.pathname, {
-    /*ref: transitionRef,*/
     initial: null,
     from: {opacity: 0},
     enter: {opacity: 1},
@@ -58,31 +58,33 @@ function App() {
   const content = useRef();
   const [open, setOpen] = useState(false);
   const [burgerHeight, setHeight] = useState(0);
-  const burgerPush = useSpring({y: !open ? 0 : burgerHeight}); // NEED TO MAKE THIS WORK, NOT SURE HOW TO PUSH IT DOWN BY THE RIGHT AMOUNT OR WHATEVER?????????
   console.log('height', burgerHeight);
-  // buggy when it first goes, NEED SOME WAY TO JUST GET HEIGHT AND KNOW IT FOR GOOD????????????????????? FLICKERS ON FIRST OPEN
-  // on close should also like slide back in 
+  const width = useWindowWidth();
+  console.log('width', width);
+
+  if(width <= 600 && burgerHeight === 0) {
+    return (
+      <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}} ref={content}>
+        <Header content={content} open={open} setOpen={setOpen} burgerHeight={burgerHeight} setHeight={setHeight} width={width}/>
+      </div>
+    )
+  }
+
   return (
     <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}} ref={content}>
-      <animated.div />
-      <Header content={content} open={open} setOpen={setOpen} burgerHeight={burgerHeight} setHeight={setHeight} />
-      <div style={open ? {flex: 1, marginTop: -1*burgerHeight} : {flex: 1}}>
-        <animated.div id={SharedStyles.contentContainer} style={{
-          transform: burgerPush.y
-          .to(y => `translate3d(0, ${y+'px'}, 0)`)
-        }}>
-          <Switch location={location}>
-            <Route exact path='/' component={Home}/>
-            <Route path='/about' component={About} />
-            <Route path='/projects' component={Projects} />
-            <Route path='/illini-events' component={IlliniEvents} />
-            <Route path='/emmys-doodles' component={EmmysDoodles} />
-            <Route path='/browser-game' component={BrowserGame} />
-            <Route path='/message-in-a-bottle' component={MessageInABottle} />
-            <Route path='/fanchat' component={Fanchat} />
-            <Route render={() => <Redirect to={{pathname: "/"}} />} />
-          </Switch>
-        </animated.div>
+      <Header content={content} open={open} setOpen={setOpen} burgerHeight={burgerHeight} setHeight={setHeight} width={width}/>
+      <div style={{flex: 1}}>
+        <Switch location={location}>
+          <Route exact path='/' component={Home}/>
+          <Route path='/about' component={About} />
+          <Route path='/projects' component={Projects} />
+          <Route path='/illini-events' component={IlliniEvents} />
+          <Route path='/emmys-doodles' component={EmmysDoodles} />
+          <Route path='/browser-game' component={BrowserGame} />
+          <Route path='/message-in-a-bottle' component={MessageInABottle} />
+          <Route path='/fanchat' component={Fanchat} />
+          <Route render={() => <Redirect to={{pathname: "/"}} />} />
+        </Switch>
       </div>
       <Footer />
     </div>
