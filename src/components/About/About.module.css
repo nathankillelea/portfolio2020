@@ -1,22 +1,160 @@
 #body {
   max-width: 1350px;
   margin: 0 auto;
-}
-
-#img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 195px;
-  margin: 0 22px 0 22px;
-}
-
-#headerContainer {
-  display: flex;
-  flex-direction: row;
+  flex: 1;
 }
 
 #aboutContainer {
-  margin: 0 22px 0 22px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 24px 22px;
+  background-color: #292929;
+  padding: 24px 22px;
+  color: #ffffff;
+}
+
+.selectionText {
+}
+
+.selectionText::selection {
+  color: #292929;
+  background:#fdfdfd;
+}
+
+#aboutContainer::selection {
+  color: #292929;
+  background:#fdfdfd;
+}
+
+#img {
+  width: 100%;
+  max-width: 390px;
+  border-radius: 100%;
+  align-self: flex-start;
+}
+
+/*this is just trash when it wraps */
+#aboutTextContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 44px;
+  flex: 1;
+}
+
+#aboutHeader {
   font-family: 'Markazi Text', serif;
   font-size: 3em;
+}
+
+#skillsContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #292929;
+  color: #ffffff;
+  margin: 0 22px 24px 22px;
+}
+
+#skillsHeader {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: 800;
+  background-color: black;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.skillsSubheader {
+  font-size: 1em;
+  font-weight: 800;
+}
+
+#skillsColumnContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 40%;
+  padding: 24px;
+}
+
+.skillsColumn {
+
+}
+
+#experienceHeader {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: 800;
+  background-color: black;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+#experienceContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #292929;
+  color: #ffffff;
+  margin: 0 22px 24px 22px;
+}
+
+#experienceContentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.experienceItemContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.experienceItemTitleContainer {
+  flex: 1;
+  margin-left: 24px;
+}
+
+.experienceItemInfoContainer {
+  flex: 1;
+  margin-right: 24px;
+}
+
+.experienceListItem {
+  border-bottom: 1px #fff solid;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+.experienceListItem:nth-child(1) {
+  padding-top: 0px;
+}
+
+.experienceListItem:nth-last-child(1) {
+  border-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 920px) {
+  #aboutContainer {
+    flex-direction: column;
+  }
+  #aboutTextContainer {
+    margin-left: 0px;
+  }
+  #img {
+    align-self: center;
+  }
 }

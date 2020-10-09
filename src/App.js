@@ -20,8 +20,6 @@ import Fanchat from './components/Fanchat/Fanchat.js';
 import Header from './components/Header/Header.js';
 import Footer from './components/Footer/Footer.js';
 
-import SharedStyles from './components/SharedStyles.module.css';
-
 import './App.css';
 
 function App() {

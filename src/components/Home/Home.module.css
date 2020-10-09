@@ -34,37 +34,14 @@
   margin-bottom: 48px;
 }
 
-/*
 @media only screen and (max-width: 800px) {
   #subtitle {
     margin: 112px auto;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  #subtitle {
-    font-size: 2em;
-  }
-  .navItem:nth-child(1) {
-    margin-right: 22px;
+@media only screen and (max-width: 600px) {
+  #subtitleText {
+    font-size: 3.5rem;
   }
 }
-
-@media only screen and (max-width: 340px) {
-  #title p {
-    font-size: 0.85em;
-  }
-  p {
-    font-size: 0.85em;
-  }
-  h1 {
-    font-size: 1.4em;
-  }
-  #subtitle h1 {
-    font-size: 2em;
-  }
-  .icon {
-    font-size: 1.4em;
-  }
-}
-*/

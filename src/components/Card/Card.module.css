@@ -1,10 +1,13 @@
+.card {
+  margin-bottom: 24px;
+}
+
 .card #img {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 788px;
   box-shadow: 0 3px 6px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.12);
-  margin-bottom: 24px;
 }
 
 .card:nth-last-child(1) {
@@ -13,8 +16,6 @@
 
 #img {
   max-height: 100%;
-  width: auto;
-  max-width: 100%;
   position: relative;
   z-index: -1;
 }
@@ -33,13 +34,17 @@
   bottom: 30%;
   right: 10%;
   text-align: right;
+  padding-left: 1em;
 }
 
 .card:nth-child(2n+1) #textContainer {
   position: absolute;
   bottom: 30%;
   left: 10%;
+  right: 0%;
   text-align: left;
+  padding-right: 1em;
+  padding-left: 0;
 }
 
 #title {
@@ -53,38 +58,20 @@
   font-size: 1.2em;
 }
 
-/*
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useSpring, useChain, animated, config } from 'react-spring';
-import styles from './Card.module.css';
-
-const Card = (props) => {
-  const [hover, setHover] = useState(false);
-  const [{ width, backgroundColor, position, top, left, height, zIndex }, set] = useSpring(() => ({ width: '0%', backgroundColor: props.backgroundColor, position: 'fixed', top: 0, left: 0, height: '100%', zIndex: 4 }));
-  const hoverState = useSpring({
-    to: { transform: 'scale(1.02)', },
-    config: config.wobbly
-  });
-
-  const color = useSpring({
-    from: {position: 'fixed', top: 0, left: 0, width: '0%', height: '100%', backgroundColor: 'rgba(255, 0, 0, 0.3)'},
-    to: {position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(255, 0, 0, 0.3)'},
-  });
-
-  return (
-    <Link to={props.link} className={styles.card}>
-      <animated.div
-        style={{hoverState}}
-        onMouseEnter={() => {setHover(true); set({width: '100%'})}}
-        onMouseLeave={() => {setHover(false); set({width: '0%'})}}
-      >
-        <animated.div style={{width, backgroundColor, position, top, left, height, zIndex}} />
-        <img id={styles.img} src={`${props.img}`}/>
-      </animated.div>
-    </Link>
-  );
+@media only screen and (max-width: 600px) {
+  #title {
+    font-size: 2em;
+  }
+  #subtitle {
+    font-size: 1em;
+  }
 }
 
-export default Card;
-*/
+@media only screen and (max-width: 410px) {
+  #title {
+    font-size: 1.5em;
+  }
+  #subtitle {
+    font-size: .90em;
+  }
+}

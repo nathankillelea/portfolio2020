@@ -8,3 +8,13 @@
   flex-direction: column;
   flex: 1;
 }
+
+.projectHeader {
+  font-weight: 900;
+  font-size: 4em;
+}
+
+.projectSubheader {
+  font-size: 1.2em;
+  color: gray;
+}
