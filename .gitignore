@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/psd
+*.psd
 /.pnp
 .pnp.js
 

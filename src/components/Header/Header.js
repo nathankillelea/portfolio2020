@@ -34,7 +34,7 @@ const Header = ({content, open, setOpen, burgerHeight, setHeight, width}) => {
       <div id={styles.headerContainer}>
         <header id={styles.header}>
         <div id={styles.title}>
-          <Link to={'/'} style={{ color: 'inherit', textDecoration: 'inherit'}} id={styles.titleText} onClick={() => setOpen(false)}>Nathan Killelea</Link>
+          <Link to={'/'} style={{ color: 'inherit', textDecoration: 'inherit'}} id={styles.titleText}>Nathan Killelea</Link>
         </div>
         <nav id={styles.nav}>
           <ul id={styles.navList}>

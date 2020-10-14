@@ -1,0 +1,40 @@
+#projectNavigationContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#projectPrevious {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#projectNext {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.projectLink {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2em;
+  transition: transform 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#projectNext:hover > .icon {
+  transform: translate(12px);
+}
+
+#projectPrevious:hover > .icon {
+  transform: translate(-12px);
+}

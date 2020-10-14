@@ -20,6 +20,8 @@ import Fanchat from './components/Fanchat/Fanchat.js';
 import Header from './components/Header/Header.js';
 import Footer from './components/Footer/Footer.js';
 
+import ScrollToTop from './ScrollToTop.js';
+
 import './App.css';
 
 function App() {
@@ -56,6 +58,8 @@ function App() {
   const content = useRef();
   const [open, setOpen] = useState(false);
   const [burgerHeight, setHeight] = useState(0);
+  const [scroll, setScroll] = useState(false);
+
   console.log('height', burgerHeight);
   const width = useWindowWidth();
   console.log('width', width);
@@ -68,24 +72,27 @@ function App() {
     )
   }
 
+  // maybe somehow conditionally render a different header on certain pages? idk, kinda getting DUMB
   return (
-    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}} ref={content}>
-      <Header content={content} open={open} setOpen={setOpen} burgerHeight={burgerHeight} setHeight={setHeight} width={width}/>
-      <div style={{flex: 1}}>
-        <Switch location={location}>
-          <Route exact path='/' component={Home}/>
-          <Route path='/about' component={About} />
-          <Route path='/projects' component={Projects} />
-          <Route path='/illini-events' component={IlliniEvents} />
-          <Route path='/emmys-doodles' component={EmmysDoodles} />
-          <Route path='/browser-game' component={BrowserGame} />
-          <Route path='/message-in-a-bottle' component={MessageInABottle} />
-          <Route path='/fanchat' component={Fanchat} />
-          <Route render={() => <Redirect to={{pathname: "/"}} />} />
-        </Switch>
+    <ScrollToTop>
+      <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}} ref={content}>
+        <Header content={content} open={open} setOpen={setOpen} burgerHeight={burgerHeight} setHeight={setHeight} width={width}/>
+        <div style={{display: 'flex', flex: 1}}>
+          <Switch location={location}>
+            <Route exact path='/' component={Home}/>
+            <Route path='/about' component={About} />
+            <Route path='/projects' component={Projects} />
+            <Route path='/illini-events' component={IlliniEvents} />
+            <Route path='/emmys-doodles' component={EmmysDoodles} />
+            <Route path='/browser-game' component={BrowserGame} />
+            <Route path='/message-in-a-bottle' component={MessageInABottle} />
+            <Route path='/fanchat' component={Fanchat} />
+            <Route render={() => <Redirect to={{pathname: "/"}} />} />
+          </Switch>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </ScrollToTop>
   );
 }
 
