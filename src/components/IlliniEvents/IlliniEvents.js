@@ -5,20 +5,11 @@ import SharedStyles from '../SharedStyles.module.css';
 import ProjectsNav from '../ProjectsNav/ProjectsNav.js';
 
 const Image = (props) => {
-  const [pressed, setPressed] = useState(false);
-
   return (
     <div className={styles.imageContainer}>
       <img
-        className={!pressed ? styles.image : styles.imageHidden}
+        className={styles.image}
         src={props.src}
-        onClick={() => setPressed(true)}
-        alt={''}
-      />
-      <img
-        className={pressed ? styles.hiddenImageVisible : styles.hiddenImage}
-        src={props.src2}
-        onClick={() => setPressed(false)}
         alt={''}
       />
     </div>
@@ -34,7 +25,7 @@ const IlliniEvents = () => {
       <div id={styles.body}>
         <section id={SharedStyles.projectInfoContainer}>
           <h2 className={SharedStyles.projectHeader}>Illini Events</h2>
-          <h3 className={SharedStyles.projectSubheader}>College event finder</h3>
+          <h3 className={SharedStyles.projectSubheader}>Illini Events was a project created by a team of 5 UIUC students for Tech and Advertising Campaigns. The aim of the project was to help increase the visibility of low attendance campus events. If students attend an event and check in, they would receive points to unlock special rewards, such as a discount on a concert ticket.</h3>
           <ul id={SharedStyles.projectTagsContainer}>
             <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagLeft}`}>
               <strong style={{color: 'rgba(229, 70, 31)'}} className={SharedStyles.projectTagText}>Role</strong><span className={SharedStyles.projectTagText}> Developer</span>
@@ -50,30 +41,20 @@ const IlliniEvents = () => {
             </li>
           </ul>
         </section>
-        <section id={SharedStyles.projectAbout}>
-          <h3 id={SharedStyles.projectAboutHeader}>What is it?</h3>
-          <p id={SharedStyles.projectAboutText}>Illini Events was a project created by a team of 5 UIUC students for Tech and Advertising Campaigns. The aim of the project was to help increase the visibility of low attendance campus events. If students attend an event and check in, they would receive points to unlock special rewards, such as a discount on a concert ticket. </p>
-        </section>
         <div className={styles.imageRow}>
-          <Image src='../../assets/illini_events_1.png' src2='../../assets/illini_events_1_color.png' />
-          <div className={styles.spacer} />
-          <Image src='../../assets/illini_events_2.png' src2='../../assets/illini_events_2_color.png' />
-          <div className={styles.spacer} />
-          <Image src='../../assets/illini_events_3.png' src2='../../assets/illini_events_3_color.png' />
+          <img src='../../assets/illini_events_1.png' className={styles.image} />
+          <img src='../../assets/illini_events_2.png' className={styles.image} />
+          <img src='../../assets/illini_events_3.png' className={styles.image} />
         </div>
         <div className={styles.imageRow}>
-          <Image src='../../assets/illini_events_4.png' src2='../../assets/illini_events_4_color.png' />
-          <div className={styles.spacer} />
-          <Image src='../../assets/illini_events_5.png' src2='../../assets/illini_events_5_color.png' />
-          <div className={styles.spacer} />
-          <Image src='../../assets/illini_events_6.png' src2='../../assets/illini_events_6_color.png' />
+          <img src='../../assets/illini_events_4.png' className={styles.image} />
+          <img src='../../assets/illini_events_5.png' className={styles.image} />
+          <img src='../../assets/illini_events_6.png' className={styles.image} />
         </div>
         <div className={styles.imageRow}>
-          <Image src='../../assets/illini_events_7.png' src2='../../assets/illini_events_7_color.png' />
-          <div className={styles.spacer} />
-          <Image src='../../assets/illini_events_8.png' src2='../../assets/illini_events_8_color.png' />
-          <div className={styles.spacer} />
-          <Image src='../../assets/illini_events_9.png' src2='../../assets/illini_events_9_color.png' />
+          <img src='../../assets/illini_events_7.png' className={styles.image} />
+          <img src='../../assets/illini_events_8.png' className={styles.image} />
+          <img src='../../assets/illini_events_9.png' className={styles.image} />
         </div>
       </div>
       <ProjectsNav previous='/fanchat' next='/emmys-doodles' />

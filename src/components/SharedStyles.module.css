@@ -26,6 +26,7 @@
 .projectSubheader {
   font-size: 1.2em;
   color: gray;
+  max-width: 600px;
 }
 
 #projectTagsContainer {
@@ -58,6 +59,7 @@
   font-weight: 600;
 }
 
+/*
 #projectAbout {
   padding: 0 22px 44px 22px;
   display: flex;
@@ -73,3 +75,4 @@
 #projectAboutText {
   max-width: 600px;
 }
+*/

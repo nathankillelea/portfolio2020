@@ -4,27 +4,6 @@ import SharedStyles from '../SharedStyles.module.css';
 
 import ProjectsNav from '../ProjectsNav/ProjectsNav.js';
 
-const Image = (props) => {
-  const [pressed, setPressed] = useState(false);
-
-  return (
-    <div className={styles.imageContainer}>
-      <img
-        className={!pressed ? styles.image : styles.imageHidden}
-        src={props.src}
-        onClick={() => setPressed(true)}
-        alt={''}
-      />
-      <img
-        className={pressed ? styles.hiddenImageVisible : styles.hiddenImage}
-        src={props.src2}
-        onClick={() => setPressed(false)}
-        alt={''}
-      />
-    </div>
-  );
-}
-
 const MessageInABottle = () => {
   return (
     <div id={SharedStyles.container}>
@@ -50,11 +29,9 @@ const MessageInABottle = () => {
           </ul>
         </div>
         <div className={styles.imageRow}>
-          <Image src='../../assets/message_in_a_bottle_1.png' src2='../../assets/message_in_a_bottle_1_color.png' />
-          <div className={styles.spacer} />
-          <Image src='../../assets/message_in_a_bottle_2.png' src2='../../assets/message_in_a_bottle_2_color.png' />
-          <div className={styles.spacer} />
-          <Image src='../../assets/message_in_a_bottle_3.png' src2='../../assets/message_in_a_bottle_3_color.png' />
+          <img src='../../assets/message_in_a_bottle_1.png' className={styles.image} />
+          <img src='../../assets/message_in_a_bottle_2.png' className={styles.image} />
+          <img src='../../assets/message_in_a_bottle_3.png' className={styles.image} />
         </div>
       </div>
       <ProjectsNav previous='/browser-game' next='/fanchat' />

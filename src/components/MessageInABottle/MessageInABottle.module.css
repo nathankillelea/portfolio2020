@@ -12,40 +12,7 @@
   align-items: center;
 }
 
-.imageContainer {
-  position: relative;
-}
-
-.imageContainer:nth-child(3n) {
-  position: relative;
-}
-
-.imageContainer:hover {
-  cursor: pointer;
-}
-
-.hiddenImageVisible {
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: visible;
-  max-height: 600px;
-}
-
-.hiddenImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  max-height: 600px;
-}
-
 .image {
-  max-height: 600px;
-}
-
-.imageHidden {
-  visibility: hidden;
   max-height: 600px;
 }
 
@@ -56,11 +23,7 @@
   padding: 0 22px 44px 22px;
 }
 
-.spacer {
-  width: 36px;
-  flex-shrink: 0;
-}
-
+/*
 @media only screen and (max-width: 767px) {
   .imageRow {
     flex-direction: column;
@@ -74,3 +37,4 @@
     padding-bottom: 24px;
   }
 }
+*/
