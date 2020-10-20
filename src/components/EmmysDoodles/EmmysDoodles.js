@@ -5,25 +5,22 @@ import SharedStyles from '../SharedStyles.module.css';
 import ProjectsNav from '../ProjectsNav/ProjectsNav.js';
 
 const EmmysDoodles = () => {
+  //'rgba(244, 219, 155)'
   return (
     <div id={SharedStyles.container}>
       <div id={styles.body}>
-        <h2 className={SharedStyles.projectHeader}>Emmy's Doodles</h2>
-        <h3 className={SharedStyles.projectSubheader}>E-commerce website for goldendoodle stickers</h3>
-        <ul id={SharedStyles.projectTagsContainer}>
-          <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagLeft}`}>
-            <strong style={{color: 'rgba(244, 219, 155)'}} className={SharedStyles.projectTagText}>Role</strong><span className={SharedStyles.projectTagText}> Developer</span>
-          </li>
-          <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagCenter}`}>
-            <strong style={{color: 'rgba(244, 219, 155)'}} className={SharedStyles.projectTagText}>Context</strong><span className={SharedStyles.projectTagText}> Freelance</span>
-          </li>
-          <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagCenter}`}>
-            <strong style={{color: 'rgba(244, 219, 155)'}} className={SharedStyles.projectTagText}>Period</strong><span className={SharedStyles.projectTagText}> Late 2019</span>
-          </li>
-          <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagRight}`}>
-            <strong style={{color: 'rgba(244, 219, 155)'}} className={SharedStyles.projectTagText}>Tech</strong><span className={SharedStyles.projectTagText}> React, Redux, Firebase</span>
-          </li>
-        </ul>
+        <section id={SharedStyles.projectInfoContainer}>
+          <h2 className={SharedStyles.projectHeader}>Emmy's Doodles</h2>
+          <h4 className={SharedStyles.projectSubheader}>Freelance Development project done in 2019 - 2020</h4>
+          <hr style={{height: '4px', width: '50px', backgroundColor: 'rgba(244, 219, 155)'}}></hr>
+          <h3 className={SharedStyles.projectInfo}>Emmy's Doodles is a </h3>
+          <div className={SharedStyles.tagContainer}>
+            <a href='/' className={SharedStyles.projectSourceButton} style={{backgroundColor: 'rgba(244, 219, 155)'}} target='_blank' rel='noopener noreferrer'>
+              <h4 style={{fontWeight: '600'}}>Website</h4>
+            </a>
+            <h4 style={{padding: '4px 12px',}}><strong style={{color: 'rgba(244, 219, 155)', fontWeight: 600}}>Tech</strong><span style={{fontWeight: 600}}> React, Redux, Stripe API</span></h4>
+          </div>
+        </section>
       </div>
       <ProjectsNav previous='/illini-events' next='/browser-game' />
     </div>

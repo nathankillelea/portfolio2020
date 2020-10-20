@@ -5,8 +5,10 @@
 
 .image {
   max-height: 600px;
+  padding-bottom: 22px;
 }
 
+/*
 .imageRow {
   display: flex;
   flex: 1;
@@ -14,13 +16,17 @@
   justify-content: center;
   padding: 0 22px 44px 22px;
 }
+*/
 
-/*.spacer {
+/*
+.spacer {
   width: 36px;
   flex-shrink: 0;
-}*/
+}
+*/
 
-/*@media only screen and (max-width: 767px) {
+/*
+@media only screen and (max-width: 767px) {
   .imageRow {
     flex-direction: column;
     align-items: center;
@@ -32,4 +38,5 @@
   .imageRow {
     padding-bottom: 24px;
   }
-}*/
+}
+*/

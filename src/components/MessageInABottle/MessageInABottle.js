@@ -8,30 +8,21 @@ const MessageInABottle = () => {
   return (
     <div id={SharedStyles.container}>
       <div id={styles.body}>
-        <div id={styles.infoContainer}>
+        <section id={SharedStyles.projectInfoContainer}>
           <h2 className={SharedStyles.projectHeader}>Message in a Bottle</h2>
-          <h3 className={SharedStyles.projectSubheader}>Motivational task tracker</h3>
-          <h3>Introduction</h3>
-          <p>blahblah message in a bottle is blah blah</p>
-          <ul id={SharedStyles.projectTagsContainer}>
-            <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagLeft}`}>
-              <strong style={{color: 'rgba(150, 206, 180)'}} className={SharedStyles.projectTagText}>Role</strong><span className={SharedStyles.projectTagText}> Front-End Developer</span>
-            </li>
-            <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagCenter}`}>
-              <strong style={{color: 'rgba(150, 206, 180)'}} className={SharedStyles.projectTagText}>Context</strong><span className={SharedStyles.projectTagText}> Education</span>
-            </li>
-            <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagCenter}`}>
-              <strong style={{color: 'rgba(150, 206, 180)'}} className={SharedStyles.projectTagText}>Period</strong><span className={SharedStyles.projectTagText}> Late 2017</span>
-            </li>
-            <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagRight}`}>
-              <strong style={{color: 'rgba(150, 206, 180)'}} className={SharedStyles.projectTagText}>Tech</strong><span className={SharedStyles.projectTagText}> MongoDB, Express, React Native, Node</span>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.imageRow}>
-          <img src='../../assets/message_in_a_bottle_1.png' className={styles.image} />
-          <img src='../../assets/message_in_a_bottle_2.png' className={styles.image} />
-          <img src='../../assets/message_in_a_bottle_3.png' className={styles.image} />
+          <h4 className={SharedStyles.projectSubheader}>Education Development project done in 2017</h4>
+          <hr style={{height: '4px', width: '50px', backgroundColor: 'rgba(150, 206, 180)'}}></hr>
+          <h3 className={SharedStyles.projectInfo}>Message in a Bottle was a project created by a team of 5 UIUC students. The project was...</h3>
+          <div className={SharedStyles.tagContainer}>
+            <a href='https://github.com/nathankillelea/CS498RK-Final-Project' className={SharedStyles.projectSourceButton} style={{backgroundColor: 'rgba(150, 206, 180)'}} target='_blank' rel='noopener noreferrer'>
+              <h4 style={{fontWeight: '600'}}>Source Code</h4>
+            </a>
+            <h4 style={{padding: '4px 12px',}}><strong style={{color: 'rgba(150, 206, 180)', fontWeight: 600}}>Tech</strong><span style={{fontWeight: 600}}> MongoDB, Express, React Native, Node</span></h4>
+          </div>
+        </section>
+        <h3 className={SharedStyles.projectDesign}>Design</h3>
+        <div className={SharedStyles.projectImageRowContainer}>
+          <img src='../../assets/message_in_a_bottle_row_1.png' className={styles.image} />
         </div>
       </div>
       <ProjectsNav previous='/browser-game' next='/fanchat' />

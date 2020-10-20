@@ -8,22 +8,18 @@ const BrowserGame = () => {
   return (
     <div id={SharedStyles.container}>
       <div id={styles.body}>
-        <h2 className={SharedStyles.projectHeader}>Browser Game</h2>
-        <h3 className={SharedStyles.projectSubheader}>Browser-based survival game</h3>
-        <ul id={SharedStyles.projectTagsContainer}>
-          <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagLeft}`}>
-            <strong style={{color: 'rgba(150, 191, 206)'}} className={SharedStyles.projectTagText}>Role</strong><span className={SharedStyles.projectTagText}> Developer</span>
-          </li>
-          <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagCenter}`}>
-            <strong style={{color: 'rgba(150, 191, 206)'}} className={SharedStyles.projectTagText}>Context</strong><span className={SharedStyles.projectTagText}> Education</span>
-          </li>
-          <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagCenter}`}>
-            <strong style={{color: 'rgba(150, 191, 206)'}} className={SharedStyles.projectTagText}>Period</strong><span className={SharedStyles.projectTagText}> Early 2018</span>
-          </li>
-          <li className={`${SharedStyles.projectTag} ${SharedStyles.projectTagRight}`}>
-            <strong style={{color: 'rgba(150, 191, 206)'}} className={SharedStyles.projectTagText}>Tech</strong><span className={SharedStyles.projectTagText}> Javascript, HTML5 Canvas</span>
-          </li>
-        </ul>
+        <section id={SharedStyles.projectInfoContainer}>
+          <h2 className={SharedStyles.projectHeader}>Browser Game</h2>
+          <h4 className={SharedStyles.projectSubheader}>Education Development project done in 2018</h4>
+          <hr style={{height: '4px', width: '50px', backgroundColor: 'rgba(150, 191, 206)'}}></hr>
+          <h3 className={SharedStyles.projectInfo}>Browser game was</h3>
+          <div className={SharedStyles.tagContainer}>
+            <a href='https://github.com/nathankillelea/CS242-Final-Project' className={SharedStyles.projectSourceButton} style={{backgroundColor: 'rgba(150, 191, 206)'}} target='_blank' rel='noopener noreferrer'>
+              <h4 style={{fontWeight: '600'}}>Source Code</h4>
+            </a>
+            <h4 style={{padding: '4px 12px',}}><strong style={{color: 'rgba(150, 191, 206)', fontWeight: 600}}>Tech</strong><span style={{fontWeight: 600}}> Javascript, HTML5 Canvas</span></h4>
+          </div>
+        </section>
       </div>
       <ProjectsNav previous='/emmys-doodles' next='/message-in-a-bottle' />
     </div>

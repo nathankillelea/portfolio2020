@@ -64,19 +64,11 @@ function App() {
   const width = useWindowWidth();
   console.log('width', width);
 
-  if(width <= 600 && burgerHeight === 0) {
-    return (
-      <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}} ref={content}>
-        <Header content={content} open={open} setOpen={setOpen} burgerHeight={burgerHeight} setHeight={setHeight} width={width}/>
-      </div>
-    )
-  }
-
   // maybe somehow conditionally render a different header on certain pages? idk, kinda getting DUMB
   return (
     <ScrollToTop>
-      <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}} ref={content}>
-        <Header content={content} open={open} setOpen={setOpen} burgerHeight={burgerHeight} setHeight={setHeight} width={width}/>
+      <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+        <Header open={open} setOpen={setOpen} width={width}/>
         <div style={{display: 'flex', flex: 1}}>
           <Switch location={location}>
             <Route exact path='/' component={Home}/>

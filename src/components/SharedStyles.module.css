@@ -11,9 +11,8 @@
 }
 
 #projectInfoContainer {
-  padding: 0 22px 44px 22px;
+  padding: 0 22px 88px 22px;
   display: flex;
-  flex-basis: 1000px;
   flex-direction: column;
   align-items: center;
 }
@@ -21,15 +20,67 @@
 .projectHeader {
   font-weight: 900;
   font-size: 4em;
+  text-align: center;
+  margin-top: 48px;
 }
 
 .projectSubheader {
   font-size: 1.2em;
-  color: gray;
   max-width: 600px;
+  text-align: center;
+  margin-bottom: 22px;
+  font-weight: 600;
 }
 
-#projectTagsContainer {
+.projectInfo {
+  font-size: 1em;
+  color: gray;
+  max-width: 600px;
+  text-align: center;
+  margin-top: 22px;
+}
+
+.projectDesign {
+  font-size: 2em;
+  font-weight: 900;
+  color: gray;
+  padding: 24px 24px;
+}
+
+.projectImageRowContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 22px;
+}
+
+.projectSourceButton {
+  padding: 4px 12px;
+  border-radius: 4em;
+  color: #fff;
+  text-decoration: inherit;
+  display: 'flex';
+  flex-shrink: 0;
+}
+
+.tagContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+  max-width: 600px;
+  align-items: center;
+  /*flexBasis: 600px;*/
+}
+
+/*.projectSubheader::after {
+  display: block;
+  margin: 0 auto;
+  content: "";
+  margin-top: 22px;
+  border: 4px solid #2BBFBD;
+  width: 60%;
+}*/
+
+/*#projectTagsContainer {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -58,6 +109,7 @@
 .projectTagText {
   font-weight: 600;
 }
+*/
 
 /*
 #projectAbout {

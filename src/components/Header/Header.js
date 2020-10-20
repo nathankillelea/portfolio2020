@@ -14,24 +14,19 @@ import { animated, useSpring, useTransition, useChain } from 'react-spring';
 // MAYBE I PUT THE USE STATE OPEN SHIT ON APP, THEN I CAN INTERPOLATE THE CONTENT DOWN AS WELL ON PRESS ??????
 
 
-const Header = ({content, open, setOpen, burgerHeight, setHeight, width}) => {
+const Header = ({open, setOpen, width}) => {
   const node = useRef(null);
   useOnClickOutside(node, () => setOpen(false));
   const burgerRef = useRef(null);
   const props = useSpring({y: open ? 0 : 100});
   console.log('width', width);
 
-  useEffect(() => {
-    if(width <= 600)
-      setHeight(burgerRef.current.clientHeight);
-  });
-
   // maybe add width <=600 to the animated div rendering but it complicates some things..
 
   // the marginbottom isnt working, is just getting set to 0
   return (
-    <div ref={node} style={width > 600 ? {position: 'sticky', top: 0, width: '100%', zIndex: 100} : {position: 'sticky', top: 0, width: '100%', zIndex: 100, marginBottom: -1*burgerHeight}}>
-      <div id={styles.headerContainer}>
+    <div ref={node} style={width > 600 ? {position: 'sticky', top: 0, width: '100%', zIndex: 100} : {position: 'sticky', top: 0, width: '100%', zIndex: 100}}>
+      <div id={styles.headerContainer} style={{zIndex: 2}}>
         <header id={styles.header}>
         <div id={styles.title}>
           <Link to={'/'} style={{ color: 'inherit', textDecoration: 'inherit'}} id={styles.titleText}>Nathan Killelea</Link>
@@ -56,23 +51,9 @@ const Header = ({content, open, setOpen, burgerHeight, setHeight, width}) => {
     {
       width <= 600
       ?
-      <animated.div
-        style={{
-          transform: props.y
-          .to(y => `translate3d(0, ${y*-1}%, 0)`)
-        }}
-        ref={burgerRef}
-      >
-        <div id={styles.burgerContainer}>
-          <ul>
-            <li className={styles.burgerNavItem}><Link to={'/about'} className={styles.burgerNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>About</Link></li>
-            <li className={styles.burgerNavItem}><Link to={'/projects'} className={styles.burgerNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>Projects</Link></li>
-            <li className={styles.burgerNavItem}><a href='mailto:nathan.killelea@gmail.com' className={styles.burgerNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>Contact</a></li>
-          </ul>
-        </div>
-      </animated.div>
+      <div></div>
       :
-      null
+      <div></div>
     }
   </div>
   )
