@@ -78,3 +78,31 @@
 .navText:hover:after {
   width: 100%;
 }
+
+#mobileNavContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(41,41,41);
+  z-index: 1000;
+  height: 100vh;
+}
+
+.mobileNavItem {
+  padding-bottom: 12px;
+}
+
+.mobileNavText {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.mobileNavText:hover {
+  color: #2BBFBD !important;
+}

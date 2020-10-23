@@ -6,7 +6,7 @@
 
 #aboutContainer {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   margin: 24px 22px;
   background-color: #292929;
   padding: 24px 22px;
@@ -14,6 +14,7 @@
 }
 
 .selectionText {
+
 }
 
 .selectionText::selection {
@@ -43,14 +44,14 @@
 
 #aboutHeader {
   font-family: 'Markazi Text', serif;
-  font-size: 3em;
+  font-size: 5em;
 }
 
 #skillsContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #292929;
+  background-color: #5E8D8C;
   color: #ffffff;
   margin: 0 22px 24px 22px;
 }
@@ -58,37 +59,63 @@
 #skillsHeader {
   display: flex;
   justify-content: center;
-  font-size: 3em;
-  font-weight: 800;
-  background-color: black;
+  font-size: 4em;
+  font-weight: 900;
+  background-color: #6A8181;
   width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
-}
-
-.skillsSubheader {
-  font-size: 1em;
-  font-weight: 800;
 }
 
 #skillsColumnContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  width: 40%;
+  width: 60%;
   padding: 24px;
 }
 
-.skillsColumn {
+.skillsItem {
+  display: flex;
+  flex-direction: row;
+}
 
+.logoContainer {
+  width: 14px;
+  margin-right: 6px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.skillsColumn {
+  
+}
+
+.skillsColumnLeft {
+}
+
+.skillsColumnCenter {
+
+}
+
+.skillsColumnRight {
+
+}
+
+.skillsSubheaderText {
+  font-size: 1em;
+  font-weight: 900;
 }
 
 #experienceHeader {
   display: flex;
   justify-content: center;
-  font-size: 3em;
-  font-weight: 800;
-  background-color: black;
+  font-size: 4em;
+  font-weight: 900;
+  background-color: #041110;
   width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -119,6 +146,10 @@
   padding-bottom: 24px;
 }
 
+.experienceItemContainer:nth-child(2n) {
+  background-color:#6A8181;
+}
+
 .experienceItemTitleContainer {
   flex: 1;
   margin-left: 24px;
@@ -127,6 +158,7 @@
 .experienceItemInfoContainer {
   flex: 1;
   margin-right: 24px;
+  padding-left: 24px;
 }
 
 .experienceListItem {
@@ -144,7 +176,18 @@
 }
 
 @media only screen and (max-width: 600px) {
-
+  .experienceItemContainer {
+    flex-direction: column;
+  }
+  .experienceItemTitleContainer {
+    border-bottom: 1px #fff solid;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    margin-right: 24px;
+  }
+  .experienceListItem:nth-child(1) {
+    padding-top: 12px;
+  }
 }
 
 @media only screen and (max-width: 920px) {

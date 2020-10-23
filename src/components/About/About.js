@@ -21,43 +21,143 @@ const About = () => {
         <section id={styles.skillsContainer}>
           <h2 id={styles.skillsHeader} className={styles.selectionText}>Skills</h2>
           <div id={styles.skillsColumnContainer}>
-            <div className={styles.skillsColumn}>
-              <h3 className={`${styles.skillsSubheader} ${styles.selectionText}`}>Languages</h3>
+            <div className={`${styles.skillsColumn} ${styles.skillsColumnLeft}`}>
+              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Languages</h3>
               <ul>
-                <li><p className={styles.selectionText}>C</p></li>
-                <li><p className={styles.selectionText}>Haskell</p></li>
-                <li><p className={styles.selectionText}>Java</p></li>
-                <li><p className={styles.selectionText}>Javascript</p></li>
-                <li><p className={styles.selectionText}>Python</p></li>
-                <li><p className={styles.selectionText}>R</p></li>
-                <li><p className={styles.selectionText}>Ruby</p></li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/C.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>C</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                   <img src='../../assets/logos/Haskell.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Haskell</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Java.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Java</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/JavaScript.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Javascript</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Python.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Python</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/R.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>R</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Ruby.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Ruby</p>
+                </li>
               </ul>
             </div>
-            <div className={styles.skillsColumn}>
-              <h3 className={`${styles.skillsSubheader} ${styles.selectionText}`}>Frameworks/Libraries</h3>
+            <div className={`${styles.skillsColumn} ${styles.skillsColumnCenter}`}>
+              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Frameworks/Libraries</h3>
               <ul>
-                <li><p className={styles.selectionText}>React</p></li>
-                <li><p className={styles.selectionText}>Redux</p></li>
-                <li><p className={styles.selectionText}>React Native</p></li>
-                <li><p className={styles.selectionText}>Express</p></li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/React.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>React</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Redux.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Redux</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/React.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>React Native</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Node.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Express</p>
+                </li>
               </ul>
             </div>
-            <div className={styles.skillsColumn}>
-              <h3 className={`${styles.skillsSubheader} ${styles.selectionText}`}>IDK</h3>
+            <div className={`${styles.skillsColumn} ${styles.skillsColumnCenter}`}>
+              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Web Technologies</h3>
               <ul>
-                <li><p className={styles.selectionText}>Firebase</p></li>
-                <li><p className={styles.selectionText}>Cloud Firestore</p></li>
-                <li><p className={styles.selectionText}>MongoDB</p></li>
-                <li><p className={styles.selectionText}>Git</p></li>
-                <li><p className={styles.selectionText}>Subversion</p></li>
-                <li><p className={styles.selectionText}>HTML5</p></li>
-                <li><p className={styles.selectionText}>CSS3</p></li>
-                <li><p className={styles.selectionText}>Node</p></li>
-                <li><p className={styles.selectionText}>MySQL</p></li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Firebase.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Firebase</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Firebase.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Cloud Firestore</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/MongoDB.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>MongoDB</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Git.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Git</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Subversion.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Subversion</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/HTML5.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>HTML5</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/CSS3.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>CSS3</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Node.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Node</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/MySQL.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>MySQL</p>
+                </li>
               </ul>
             </div>
-            <div className={styles.skillsColumn}>
-              <h3 className={`${styles.skillsSubheader} ${styles.selectionText}`}>IDK2</h3>
+            <div className={`${styles.skillsColumn} ${styles.skillsColumnRight}`}>
+              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>eggman</h3>
               <ul>
                 <li><p className={styles.selectionText}>STUFF</p></li>
               </ul>

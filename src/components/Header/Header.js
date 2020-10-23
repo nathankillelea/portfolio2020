@@ -2,37 +2,36 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useWindowWidth } from '@react-hook/window-size'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import styles from './Header.module.css';
 
-import { useOnClickOutside } from '../../hooks';
 import { animated, useSpring, useTransition, useChain } from 'react-spring';
-
-// WHEN U OPEN THE BURGER IT DOESNT LOOK GOOD CUZ THE SPACE IS RENDERED IN THE DOM IMMEDIATELY SO THE SPACE APPEARS IMMEDIATELY
-// THEN THE CONTENT SLIDES IN, I WOULD LIKE THE CONTENT TO SLIDE DOWN WITH IT TO LOOK LIKE ITS PUSHING IT DOWN
 
 // MAYBE I PUT THE USE STATE OPEN SHIT ON APP, THEN I CAN INTERPOLATE THE CONTENT DOWN AS WELL ON PRESS ??????
 
+// MAYBE I CAN MAKE IT NOT TRANSPARENT AND BE A TRANSITION FROM THE TOP OR BOTTOM OF THE SCREEN (THE BURGER THAT IS)
 
 const Header = ({open, setOpen, width}) => {
-  const node = useRef(null);
-  useOnClickOutside(node, () => setOpen(false));
-  const burgerRef = useRef(null);
-  const props = useSpring({y: open ? 0 : 100});
-  console.log('width', width);
+  const props = useSpring({x: open ? 0 : 100});
 
-  // maybe add width <=600 to the animated div rendering but it complicates some things..
+  useEffect(() => {
+    if(open) {
+      document.body.style.overflow = 'hidden';
+    }
+    else {
+      document.body.style.overflow = 'auto';
+    }
+  })
 
-  // the marginbottom isnt working, is just getting set to 0
   return (
-    <div ref={node} style={width > 600 ? {position: 'sticky', top: 0, width: '100%', zIndex: 100} : {position: 'sticky', top: 0, width: '100%', zIndex: 100}}>
+    <div style={{position: 'sticky', top: 0, width: '100%', zIndex: 100}}>
       <div id={styles.headerContainer} style={{zIndex: 2}}>
         <header id={styles.header}>
-        <div id={styles.title}>
-          <Link to={'/'} style={{ color: 'inherit', textDecoration: 'inherit'}} id={styles.titleText}>Nathan Killelea</Link>
-        </div>
-        <nav id={styles.nav}>
-          <ul id={styles.navList}>
+          <div id={styles.title}>
+            <Link to={'/'} style={{ color: 'inherit', textDecoration: 'inherit'}} id={styles.titleText}>Nathan Killelea</Link>
+          </div>
+          <nav id={styles.nav}>
+            <ul id={styles.navList}>
             {
               width <= 600
               ?
@@ -44,17 +43,37 @@ const Header = ({open, setOpen, width}) => {
                 <li className={styles.navItem}><a href='mailto:nathan.killelea@gmail.com' className={styles.navText} style={{ color: 'inherit', textDecoration: 'inherit'}}>Contact</a></li>
               </>
             }
+            </ul>
+          </nav>
+        </header>
+      </div>
+      {
+        width <= 600
+        ?
+        <animated.div id={styles.mobileNavContainer} 
+          style={{
+            transform: props.x
+            .to(x => `translate3d(${x}%, 0, 0)`)
+          }}
+        >
+          <div style={{position: 'absolute', top: 0, left: 0, width: '100%'}}>
+            <header id={styles.header}>
+              <nav id={styles.nav}>
+                <ul id={styles.navList}>
+                  <li><FontAwesomeIcon id={styles.burger} icon={faTimes} onClick={() => setOpen(!open)} /></li>
+                </ul>
+              </nav>
+            </header>
+          </div>
+          <ul>
+            <li className={styles.mobileNavItem}><Link to={'/about'} className={styles.mobileNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>About</Link></li>
+            <li className={styles.mobileNavItem}><Link to={'/projects'} className={styles.mobileNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>Projects</Link></li>
+            <li className={styles.mobileNavItem}><a href='mailto:nathan.killelea@gmail.com' className={styles.mobileNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>Contact</a></li>
           </ul>
-        </nav>
-      </header>
-    </div>
-    {
-      width <= 600
-      ?
-      <div></div>
-      :
-      <div></div>
-    }
+        </animated.div>
+        :
+        null
+      }
   </div>
   )
 };
