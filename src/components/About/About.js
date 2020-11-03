@@ -15,7 +15,9 @@ const About = () => {
           <img src='../../assets/nathan_killelea.jpg' id={styles.img} />
           <div id={styles.aboutTextContainer}>
             <h2 id={styles.aboutHeader} className={styles.selectionText}>Hey, I'm Nathan Killelea.</h2>
-            <p className={styles.selectionText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p className={styles.selectionText}>I am a software developer with a passion for all things web. I am a graduate from the College of Engineering at the University of Illinois at Urbana-Champaign.</p>
+            <p className={styles.selectionText} style={{paddingTop: '24px'}}>I love using modern frameworks and technologies to create simple, elegant web solutions. I am always learning and trying to improve my skills. I approach .. lorem ipsum askdfasdfjasl;dfjl;asjdf;;;;; ;asd fasd;flkj; asdf;lkj;lasdjfl;asdl;fjla;sdjfljasldjf</p>
+            <p className={styles.selectionText} style={{paddingTop: '24px'}}>I am currently open to full-time, part-time, or freelance opportunities.</p>
           </div>
         </section>
         <section id={styles.skillsContainer}>

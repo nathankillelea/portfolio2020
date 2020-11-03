@@ -11,6 +11,7 @@
   background-color: #292929;
   padding: 24px 22px;
   color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.12);
 }
 
 .selectionText {
@@ -51,9 +52,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #5E8D8C;
+  background-color: #6c6c6c;
   color: #ffffff;
   margin: 0 22px 24px 22px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.12);
 }
 
 #skillsHeader {
@@ -61,7 +63,7 @@
   justify-content: center;
   font-size: 4em;
   font-weight: 900;
-  background-color: #6A8181;
+  background-color: #3f3f3f;
   width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -90,21 +92,6 @@
   height: auto;
 }
 
-.skillsColumn {
-  
-}
-
-.skillsColumnLeft {
-}
-
-.skillsColumnCenter {
-
-}
-
-.skillsColumnRight {
-
-}
-
 .skillsSubheaderText {
   font-size: 1em;
   font-weight: 900;
@@ -115,7 +102,7 @@
   justify-content: center;
   font-size: 4em;
   font-weight: 900;
-  background-color: #041110;
+  background-color: #ededed;
   width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -125,9 +112,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #292929;
-  color: #ffffff;
+  color: #6c6c6c;
   margin: 0 22px 24px 22px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.12);
 }
 
 #experienceContentContainer {
@@ -136,18 +123,21 @@
   width: 100%;
   align-items: flex-start;
   justify-content: flex-start;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 24px;
 }
 
 .experienceItemContainer {
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 0;
+  box-sizing: border-box;
 }
 
-.experienceItemContainer:nth-child(2n) {
-  background-color:#6A8181;
+.experienceItemContainer:nth-child(2n+1) {
+  background-color:#ededed;
 }
 
 .experienceItemTitleContainer {
@@ -162,7 +152,7 @@
 }
 
 .experienceListItem {
-  border-bottom: 1px #fff solid;
+  border-bottom: 1px rgba(0,0,0,.1) solid;
   padding-bottom: 12px;
   padding-top: 12px;
 }

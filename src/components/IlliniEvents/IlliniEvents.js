@@ -25,9 +25,9 @@ const IlliniEvents = () => {
         </section>
         <h3 className={SharedStyles.projectDesign}>Design</h3>
         <div className={SharedStyles.projectImageRowContainer}>
-          <img src='../../assets/illini_events_row_1.png' className={styles.image} />
-          <img src='../../assets/illini_events_row_2.png' className={styles.image} />
-          <img src='../../assets/illini_events_row_3.png' className={styles.image} />
+          <img src='../../assets/illini_events_row_1.jpg' className={styles.image} />
+          <img src='../../assets/illini_events_row_2.jpg' className={styles.image} />
+          <img src='../../assets/illini_events_row_3.jpg' className={styles.image} />
         </div>
       </div>
       <ProjectsNav previous='/fanchat' next='/emmys-doodles' />
