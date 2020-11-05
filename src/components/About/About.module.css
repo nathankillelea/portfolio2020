@@ -4,6 +4,11 @@
   flex: 1;
 }
 
+.selectionText::selection {
+  color: #292929;
+  background:#fdfdfd;
+}
+
 #aboutContainer {
   display: flex;
   flex-direction: row;
@@ -14,25 +19,21 @@
   box-shadow: 0 3px 6px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.12);
 }
 
-.selectionText {
-
-}
-
-.selectionText::selection {
-  color: #292929;
-  background:#fdfdfd;
-}
-
 #aboutContainer::selection {
   color: #292929;
   background:#fdfdfd;
 }
 
-#img {
+.imageContainer {
+  
+}
+
+.img {
   width: 100%;
   max-width: 390px;
   border-radius: 100%;
   align-self: flex-start;
+  justify-self: center;
 }
 
 /*this is just trash when it wraps */
@@ -41,11 +42,12 @@
   flex-direction: column;
   margin-left: 44px;
   flex: 1;
+  max-width: 690px;
 }
 
 #aboutHeader {
   font-family: 'Markazi Text', serif;
-  font-size: 5em;
+  font-size: 3em;
 }
 
 #skillsContainer {
@@ -61,7 +63,7 @@
 #skillsHeader {
   display: flex;
   justify-content: center;
-  font-size: 4em;
+  font-size: 2.5em;
   font-weight: 900;
   background-color: #3f3f3f;
   width: 100%;
@@ -100,7 +102,7 @@
 #experienceHeader {
   display: flex;
   justify-content: center;
-  font-size: 4em;
+  font-size: 2.5em;
   font-weight: 900;
   background-color: #ededed;
   width: 100%;
@@ -126,6 +128,22 @@
   background-color: #fff;
   box-sizing: border-box;
   padding: 24px;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 22px 24px 22px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.12);
+  color: inherit;
+  text-decoration: none;
+}
+
+.linkContainerContent { 
+  font-size: 2.5em;
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 .experienceItemContainer {

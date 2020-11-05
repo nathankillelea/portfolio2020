@@ -35,14 +35,16 @@
   margin-bottom: 48px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   #subtitle {
     margin: 112px auto;
   }
 }
 
+/*
 @media only screen and (max-width: 600px) {
   #subtitleText {
     font-size: 3.5rem;
   }
 }
+*/

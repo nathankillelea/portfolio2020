@@ -8,7 +8,7 @@ const Home = () => {
     <div id={SharedStyles.container}>
       <div id={styles.body}>
         <section id={styles.subtitle}>
-          <h1 id={styles.subtitleText}>Hey! I am Nathan. I am a software developer.</h1>
+          <h1 id={styles.subtitleText}>Hey! I'm Nathan, software developer.</h1>
         </section>
         <section id={styles.projects}>
           <h1 id={styles.projectsText}>Projects</h1>

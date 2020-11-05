@@ -12,20 +12,34 @@ const About = () => {
     <div id={SharedStyles.container}>
       <div id={styles.body}>
         <section id={styles.aboutContainer}>
-          <img src='../../assets/nathan_killelea.jpg' id={styles.img} />
+          <div className={styles.imageContainer}>
+            <img src='../../assets/nathan_killelea.jpg' className={styles.img} />
+          </div>
           <div id={styles.aboutTextContainer}>
             <h2 id={styles.aboutHeader} className={styles.selectionText}>Hey, I'm Nathan Killelea.</h2>
             <p className={styles.selectionText}>I am a software developer with a passion for all things web. I am a graduate from the College of Engineering at the University of Illinois at Urbana-Champaign.</p>
-            <p className={styles.selectionText} style={{paddingTop: '24px'}}>I love using modern frameworks and technologies to create simple, elegant web solutions. I am always learning and trying to improve my skills. I approach .. lorem ipsum askdfasdfjasl;dfjl;asjdf;;;;; ;asd fasd;flkj; asdf;lkj;lasdjfl;asdl;fjla;sdjfljasldjf</p>
+            <p className={styles.selectionText} style={{paddingTop: '24px'}}>I love using modern frameworks and technologies to create simple, elegant web solutions. I am always learning and trying to improve my skills as a developer. I may not know everything, but I am uniquely determined and capable of figuring out creative solutions to any problem that I come across.</p>
             <p className={styles.selectionText} style={{paddingTop: '24px'}}>I am currently open to full-time, part-time, or freelance opportunities.</p>
           </div>
         </section>
         <section id={styles.skillsContainer}>
-          <h2 id={styles.skillsHeader} className={styles.selectionText}>Skills</h2>
+          <h2 id={styles.skillsHeader} className={styles.selectionText}>Skills and Technologies</h2>
           <div id={styles.skillsColumnContainer}>
             <div className={`${styles.skillsColumn} ${styles.skillsColumnLeft}`}>
               <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Languages</h3>
               <ul>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/HTML5.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>HTML5</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/CSS3.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>CSS3</p>
+                </li>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/C.png' className={styles.logo} />
@@ -104,24 +118,6 @@ const About = () => {
               <ul>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Firebase.png' className={styles.logo} />
-                  </div>
-                  <p className={styles.selectionText}>Firebase</p>
-                </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Firebase.png' className={styles.logo} />
-                  </div>
-                  <p className={styles.selectionText}>Cloud Firestore</p>
-                </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/MongoDB.png' className={styles.logo} />
-                  </div>
-                  <p className={styles.selectionText}>MongoDB</p>
-                </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
                     <img src='../../assets/logos/Git.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>Git</p>
@@ -134,21 +130,26 @@ const About = () => {
                 </li>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/HTML5.png' className={styles.logo} />
-                  </div>
-                  <p className={styles.selectionText}>HTML5</p>
-                </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/CSS3.png' className={styles.logo} />
-                  </div>
-                  <p className={styles.selectionText}>CSS3</p>
-                </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
                     <img src='../../assets/logos/Node.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>Node</p>
+                </li>
+              </ul>
+            </div>
+            <div className={`${styles.skillsColumn} ${styles.skillsColumnRight}`}>
+              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Databases</h3>
+              <ul>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Firebase.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>Firebase Cloud Firestore</p>
+                </li>
+                <li className={styles.skillsItem}>
+                  <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/MongoDB.png' className={styles.logo} />
+                  </div>
+                  <p className={styles.selectionText}>MongoDB</p>
                 </li>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
@@ -158,58 +159,61 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <div className={`${styles.skillsColumn} ${styles.skillsColumnRight}`}>
-              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>eggman</h3>
-              <ul>
-                <li><p className={styles.selectionText}>STUFF</p></li>
-              </ul>
-            </div>
           </div>
         </section>
         <section id={styles.experienceContainer}>
-          <h2 id={styles.experienceHeader} className={styles.selectionText}>Experiences</h2>
+          <h2 id={styles.experienceHeader}>Experience and Education</h2>
           <div id={styles.experienceContentContainer}>
             <div className={styles.experienceItemContainer}>
               <div className={styles.experienceItemTitleContainer}>
-                <h3 className={styles.selectionText}>Epic Systems</h3>
-                <h4 className={styles.selectionText}>Software Developer</h4>
-                <h4 className={styles.selectionText}>2018-2019</h4>
+                <h3>⚕️ Epic Systems</h3>
+                <h4>Software Developer</h4>
+                <h4>2018-2019</h4>
               </div>
               <ul className={styles.experienceItemInfoContainer}>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Solved high priority, regulatory issues critical to customers' financial success</p></li>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Worked on bug fixes, user interface updates, and implementing new features</p></li>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Performed and received regular code review for company best standards and code functionality</p></li>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Developed in Caché/M, VB6, C#, and Typescript</p></li>
+                <li className={styles.experienceListItem}><p>Solved high priority, regulatory issues critical to customers' financial success</p></li>
+                <li className={styles.experienceListItem}><p>Worked on bug fixes, user interface updates, and implementing new features</p></li>
+                <li className={styles.experienceListItem}><p>Performed and received regular code review for company best standards and code functionality</p></li>
+                <li className={styles.experienceListItem}><p>Developed in Caché/M, VB6, C#, and Typescript</p></li>
               </ul>
             </div>
             <div className={styles.experienceItemContainer}>
               <div className={styles.experienceItemTitleContainer}>
-                <h3 className={styles.selectionText}>University of Illinois at Urbana-Champaign</h3>
-                <h4 className={styles.selectionText}>Computer Science</h4>
-                <h4 className={styles.selectionText}>2016-2018</h4>
+                <h3>📙 University of Illinois at Urbana-Champaign</h3>
+                <h4>Computer Science</h4>
+                <h4>2016-2018</h4>
               </div>
               <ul className={styles.experienceItemInfoContainer}>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Graduated with a 3.44 GPA</p></li>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Earned a Bachelor's Degree in Computer Science</p></li>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Made the Dean's List Spring 2018</p></li>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Selected Coursework: The Art of Web Programing, User Interface Design, Tech and Advertising Campaigns, Digital Forensics, Computer Security 1, Applied Machine Learning</p></li>
+                <li className={styles.experienceListItem}><p>Graduated with a 3.44 GPA</p></li>
+                <li className={styles.experienceListItem}><p>Earned a Bachelor's Degree in Computer Science</p></li>
+                <li className={styles.experienceListItem}><p>Made the Dean's List Spring 2018</p></li>
+                <li className={styles.experienceListItem}><p>Selected Coursework: The Art of Web Programing, User Interface Design, Tech and Advertising Campaigns, Digital Forensics, Computer Security 1, Applied Machine Learning</p></li>
               </ul>
             </div>
             <div className={styles.experienceItemContainer}>
               <div className={styles.experienceItemTitleContainer}>
-                <h3 className={styles.selectionText}>Illinois Valley Community College</h3>
-                <h4 className={styles.selectionText}>Associate of Engineering Science</h4>
-                <h4 className={styles.selectionText}>2014-2016</h4>
+                <h3>🏫 Illinois Valley Community College</h3>
+                <h4>Associate of Engineering Science</h4>
+                <h4>2014-2016</h4>
               </div>
               <ul className={styles.experienceItemInfoContainer}>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Graduated with a 3.89 GPA</p></li>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Earned an Associate of Engineering Science degree</p></li>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Received academic and/or presidential honors every semester</p></li>
-                <li className={styles.experienceListItem}><p className={styles.selectionText}>Member of Phi Theta Kappa Honor Society and Sigma Kappa Delta Honor Society</p></li>
+                <li className={styles.experienceListItem}><p>Graduated with a 3.89 GPA</p></li>
+                <li className={styles.experienceListItem}><p>Earned an Associate of Engineering Science degree</p></li>
+                <li className={styles.experienceListItem}><p>Received academic and/or presidential honors every semester</p></li>
+                <li className={styles.experienceListItem}><p>Member of Phi Theta Kappa Honor Society and Sigma Kappa Delta Honor Society</p></li>
               </ul>
             </div>
           </div>
         </section>
+        <a href='../../assets/resume.pdf' className={styles.linkContainer}>
+          <h2 className={styles.linkContainerContent}>download my resume</h2>
+        </a>
+        <a href='mailto:nathan.killelea@gmail.com' className={styles.linkContainer}>
+          <h2 className={styles.linkContainerContent}>hire me</h2>
+        </a>
+        <a href='https://www.linkedin.com/in/killelea/' className={styles.linkContainer}>
+          <h2 className={styles.linkContainerContent}>connect with me</h2>
+        </a>
       </div>
     </div>
   );
