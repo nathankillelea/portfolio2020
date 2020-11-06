@@ -39,7 +39,6 @@ const Header = ({open, setOpen, width}) => {
               :
               <>
                 <li className={styles.navItem}><Link to={'/about'} className={styles.navText} style={{ color: 'inherit', textDecoration: 'inherit'}}>About</Link></li>
-                <li className={styles.navItem}><Link to={'/projects'} className={styles.navText} style={{ color: 'inherit', textDecoration: 'inherit'}}>Projects</Link></li>
                 <li className={styles.navItem}><a href='mailto:nathan.killelea@gmail.com' className={styles.navText} style={{ color: 'inherit', textDecoration: 'inherit'}}>Contact</a></li>
               </>
             }
@@ -67,7 +66,6 @@ const Header = ({open, setOpen, width}) => {
           </div>
           <ul>
             <li className={styles.mobileNavItem}><Link to={'/about'} className={styles.mobileNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>About</Link></li>
-            <li className={styles.mobileNavItem}><Link to={'/projects'} className={styles.mobileNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>Projects</Link></li>
             <li className={styles.mobileNavItem}><a href='mailto:nathan.killelea@gmail.com' className={styles.mobileNavText} style={{ color: 'inherit', textDecoration: 'inherit'}} onClick={() => setOpen(false)}>Contact</a></li>
           </ul>
         </animated.div>

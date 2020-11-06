@@ -14,7 +14,7 @@
   flex-direction: row;
   margin: 24px 22px;
   background-color: #292929;
-  padding: 24px 22px;
+  padding: 48px 48px;
   color: #ffffff;
   box-shadow: 0 3px 6px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.12);
 }
@@ -25,12 +25,13 @@
 }
 
 .imageContainer {
-  
+  display: flex;
+  justify-content: center;
 }
 
 .img {
   width: 100%;
-  max-width: 390px;
+  max-width: 290px;
   border-radius: 100%;
   align-self: flex-start;
   justify-self: center;
@@ -47,41 +48,64 @@
 
 #aboutHeader {
   font-family: 'Markazi Text', serif;
+  font-weight: 700;
   font-size: 3em;
+  line-height: 1;
 }
 
 #skillsContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #6c6c6c;
-  color: #ffffff;
+  background-color: #ededed; /*6c6c6c*/
+  color: #6c6c6c; /*#ffffff*/
   margin: 0 22px 24px 22px;
   box-shadow: 0 3px 6px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.12);
 }
 
-#skillsHeader {
+#skillsHeaderContainer {
   display: flex;
   justify-content: center;
+  background-color: #d3d3d3; /*3f3f3f*/
+  width: 100%;
+  padding: 24px 0;
+
+}
+
+#skillsHeader {
   font-size: 2.5em;
   font-weight: 900;
-  background-color: #3f3f3f;
-  width: 100%;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 0 24px;
 }
 
 #skillsColumnContainer {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  width: 60%;
+  flex-flow: column;
   padding: 24px;
 }
 
 .skillsItem {
   display: flex;
   flex-direction: row;
+  padding-top: 4px;
+}
+
+/*somehow make this work??????? idfk */
+.skillsItem:after {
+  content: "";
+  display: block;
+  background-color: white;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.skillsListRow {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .logoContainer {
@@ -95,19 +119,24 @@
 }
 
 .skillsSubheaderText {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 900;
+  text-align: center;
+  padding-top: 16px;
+}
+
+#experienceHeaderContainer {
+  display: flex;
+  justify-content: center;
+  background-color: #ededed;
+  width: 100%;
+  padding: 24px 0;
 }
 
 #experienceHeader {
-  display: flex;
-  justify-content: center;
   font-size: 2.5em;
   font-weight: 900;
-  background-color: #ededed;
-  width: 100%;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 0 24px;
 }
 
 #experienceContainer {
@@ -140,10 +169,21 @@
   text-decoration: none;
 }
 
+.iconContainer {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 5px;
+  padding: 0 11px;
+}
+
 .linkContainerContent { 
   font-size: 2.5em;
   font-weight: 900;
-  white-space: nowrap;
+  padding: 22px;
+  text-align: center;
 }
 
 .experienceItemContainer {
@@ -188,7 +228,7 @@
     flex-direction: column;
   }
   .experienceItemTitleContainer {
-    border-bottom: 1px #fff solid;
+    border-bottom: 1px rgba(0,0,0,.1) solid;
     padding-bottom: 12px;
     padding-top: 12px;
     margin-right: 24px;
@@ -208,4 +248,55 @@
   #img {
     align-self: center;
   }
+  .imageContainer {
+    padding-bottom: 24px;
+  }
 }
+
+/*
+@media only screen and (max-width: 845px) {
+  #ruby {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 758px) {
+  #ruby {
+    display: block;
+  }
+  #r {
+    display: none;
+    margin-left: -27px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #r {
+    visibility: visible;
+  }
+  #python { 
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #python { 
+    visibility: visible;
+  }
+  #javascript {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 482px) {
+  #javascript {
+    visibility: visible;
+  }
+  #java {
+    visibility: hidden;
+  }
+  #ruby {
+    visibility: hidden;
+  }
+}
+*/

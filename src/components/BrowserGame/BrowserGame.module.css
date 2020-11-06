@@ -3,3 +3,8 @@
   margin: 0 auto;
   flex: 1;
 }
+
+.image {
+  max-height: 600px;
+  padding-bottom: 22px;
+}

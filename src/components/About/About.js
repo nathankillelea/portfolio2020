@@ -1,6 +1,8 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import styles from './About.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import SharedStyles from '../SharedStyles.module.css';
 
 // FIX RESPONSIVENESS!!!!!!!!!!!
@@ -17,94 +19,139 @@ const About = () => {
           </div>
           <div id={styles.aboutTextContainer}>
             <h2 id={styles.aboutHeader} className={styles.selectionText}>Hey, I'm Nathan Killelea.</h2>
-            <p className={styles.selectionText}>I am a software developer with a passion for all things web. I am a graduate from the College of Engineering at the University of Illinois at Urbana-Champaign.</p>
+            <p className={styles.selectionText} style={{paddingTop: '24px'}}>I am a software developer with a passion for all things web. I am a graduate from the College of Engineering at the University of Illinois at Urbana-Champaign.</p>
             <p className={styles.selectionText} style={{paddingTop: '24px'}}>I love using modern frameworks and technologies to create simple, elegant web solutions. I am always learning and trying to improve my skills as a developer. I may not know everything, but I am uniquely determined and capable of figuring out creative solutions to any problem that I come across.</p>
             <p className={styles.selectionText} style={{paddingTop: '24px'}}>I am currently open to full-time, part-time, or freelance opportunities.</p>
           </div>
         </section>
         <section id={styles.skillsContainer}>
-          <h2 id={styles.skillsHeader} className={styles.selectionText}>Skills and Technologies</h2>
+          <div id={styles.skillsHeaderContainer}>
+            <h2 id={styles.skillsHeader} className={styles.selectionText}>Skills and Technologies</h2>
+          </div>
           <div id={styles.skillsColumnContainer}>
-            <div className={`${styles.skillsColumn} ${styles.skillsColumnLeft}`}>
-              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Languages</h3>
-              <ul>
+            <div id={styles.rowOne}>
+              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`} style={{paddingTop: 0}}>Languages</h3>
+              <ul className={styles.skillsListRow}>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/HTML5.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>HTML5</p>
                 </li>
+                <div className={styles.iconContainer}>
+                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                </div>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/CSS3.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>CSS3</p>
                 </li>
+                <div className={styles.iconContainer}>
+                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                </div>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/C.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>C</p>
                 </li>
+                <div className={styles.iconContainer}>
+                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                </div>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                    <img src='../../assets/logos/Haskell.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>Haskell</p>
                 </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Java.png' className={styles.logo} />
+                <div style={{display: 'flex'}}>
+                  <div className={styles.iconContainer} className={styles.java}>
+                    <FontAwesomeIcon icon={faCircle} className={styles.icon} />
                   </div>
-                  <p className={styles.selectionText}>Java</p>
-                </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/JavaScript.png' className={styles.logo} />
+                  <li className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/Java.png' className={styles.logo} />
+                    </div>
+                    <p className={styles.selectionText}>Java</p>
+                  </li>
+                </div>
+                <div style={{display: 'flex'}}>
+                  <div className={styles.iconContainer} id={styles.javascript}>
+                    <FontAwesomeIcon icon={faCircle} className={styles.icon} />
                   </div>
-                  <p className={styles.selectionText}>Javascript</p>
-                </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Python.png' className={styles.logo} />
+                  <li className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/JavaScript.png' className={styles.logo} />
+                    </div>
+                    <p className={styles.selectionText}>Javascript</p>
+                  </li>
+                </div>
+                <div style={{display: 'flex'}}>
+                  <div className={styles.iconContainer} id={styles.python}>
+                    <FontAwesomeIcon icon={faCircle} className={styles.icon} />
                   </div>
-                  <p className={styles.selectionText}>Python</p>
-                </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/R.png' className={styles.logo} />
+                  <li className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/Python.png' className={styles.logo} />
+                    </div>
+                    <p className={styles.selectionText}>Python</p>
+                  </li>
+                </div>
+                <div style={{display: 'flex'}}>
+                  <div className={styles.iconContainer} id={styles.r}>
+                    <FontAwesomeIcon icon={faCircle} className={styles.icon} />
                   </div>
-                  <p className={styles.selectionText}>R</p>
-                </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Ruby.png' className={styles.logo} />
+                  <li className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/R.png' className={styles.logo} />
+                    </div>
+                    <p className={styles.selectionText}>R</p>
+                  </li>
+                </div>
+                <div style={{display: 'flex'}}>
+                  <div className={styles.iconContainer} id={styles.ruby}>
+                    <FontAwesomeIcon icon={faCircle} className={styles.icon} />
                   </div>
-                  <p className={styles.selectionText}>Ruby</p>
-                </li>
+                  <li className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/Ruby.png' className={styles.logo} />
+                    </div>
+                    <p className={styles.selectionText}>Ruby</p>
+                  </li>
+                </div>
               </ul>
             </div>
-            <div className={`${styles.skillsColumn} ${styles.skillsColumnCenter}`}>
+            <div id={styles.rowTwo}>
               <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Frameworks/Libraries</h3>
-              <ul>
+              <ul className={styles.skillsListRow}>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/React.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>React</p>
                 </li>
+                <div className={styles.iconContainer}>
+                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                </div>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/Redux.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>Redux</p>
                 </li>
+                <div className={styles.iconContainer}>
+                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                </div>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/React.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>React Native</p>
                 </li>
+                <div className={styles.iconContainer}>
+                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                </div>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/Node.png' className={styles.logo} />
@@ -113,21 +160,27 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <div className={`${styles.skillsColumn} ${styles.skillsColumnCenter}`}>
+            <div id={styles.rowThree}>
               <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Web Technologies</h3>
-              <ul>
+              <ul className={styles.skillsListRow}>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/Git.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>Git</p>
                 </li>
+                <div className={styles.iconContainer}>
+                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                </div>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/Subversion.png' className={styles.logo} />
                   </div>
                   <p className={styles.selectionText}>Subversion</p>
                 </li>
+                <div className={styles.iconContainer}>
+                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                </div>
                 <li className={styles.skillsItem}>
                   <div className={styles.logoContainer}>
                     <img src='../../assets/logos/Node.png' className={styles.logo} />
@@ -136,33 +189,47 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <div className={`${styles.skillsColumn} ${styles.skillsColumnRight}`}>
+            <div id={styles.rowFour}>
               <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Databases</h3>
-              <ul>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Firebase.png' className={styles.logo} />
+              <ul className={styles.skillsListRow}>
+                <li>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/Firebase.png' className={styles.logo} />
+                    </div>
+                    <p className={styles.selectionText}>Firebase Cloud Firestore</p>
                   </div>
-                  <p className={styles.selectionText}>Firebase Cloud Firestore</p>
                 </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/MongoDB.png' className={styles.logo} />
+                <div className={styles.iconContainer}>
+                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                </div>
+                <li>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/MongoDB.png' className={styles.logo} />
+                    </div>
+                    <p className={styles.selectionText}>MongoDB</p>
                   </div>
-                  <p className={styles.selectionText}>MongoDB</p>
                 </li>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/MySQL.png' className={styles.logo} />
+                <div className={styles.iconContainer}>
+                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                </div>
+                <li>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/MySQL.png' className={styles.logo} />
+                    </div>
+                    <p className={styles.selectionText}>MySQL</p>
                   </div>
-                  <p className={styles.selectionText}>MySQL</p>
                 </li>
               </ul>
             </div>
           </div>
         </section>
         <section id={styles.experienceContainer}>
-          <h2 id={styles.experienceHeader}>Experience and Education</h2>
+          <div id={styles.experienceHeaderContainer}>
+            <h2 id={styles.experienceHeader}>Experience and Education</h2>
+          </div>
           <div id={styles.experienceContentContainer}>
             <div className={styles.experienceItemContainer}>
               <div className={styles.experienceItemTitleContainer}>

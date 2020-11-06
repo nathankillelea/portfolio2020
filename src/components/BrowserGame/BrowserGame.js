@@ -20,6 +20,10 @@ const BrowserGame = () => {
             <h4 style={{padding: '4px 12px',}}><strong style={{color: 'rgba(150, 191, 206)', fontWeight: 600}}>Tech</strong><span style={{fontWeight: 600}}> Javascript, HTML5 Canvas</span></h4>
           </div>
         </section>
+        <h3 className={SharedStyles.projectDesign}>Design</h3>
+        <div className={SharedStyles.projectImageRowContainer}>
+          <img src='../../assets/browser_game_1.jpg' className={styles.image} />
+        </div>
       </div>
       <ProjectsNav previous='/emmys-doodles' next='/message-in-a-bottle' />
     </div>
