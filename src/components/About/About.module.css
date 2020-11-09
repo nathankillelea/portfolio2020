@@ -53,6 +53,18 @@
   line-height: 1;
 }
 
+@media only screen and (max-width: 544px) {
+  #aboutHeader {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 357px) {
+  #aboutHeader {
+    font-size: 2em;
+  }
+}
+
 #skillsContainer {
   display: flex;
   align-items: center;
@@ -69,11 +81,10 @@
   background-color: #d3d3d3; /*3f3f3f*/
   width: 100%;
   padding: 24px 0;
-
 }
 
-#skillsHeader {
-  font-size: 2.5em;
+#skillsHeader, #experienceHeader {
+  font-size: 2em;
   font-weight: 900;
   padding: 0 24px;
 }
@@ -81,24 +92,14 @@
 #skillsColumnContainer {
   display: flex;
   flex-flow: column;
-  padding: 24px;
+  padding: 24px 15px;
 }
 
-.skillsItem {
-  display: flex;
-  flex-direction: row;
-  padding-top: 4px;
-}
-
-/*somehow make this work??????? idfk */
-.skillsItem:after {
-  content: "";
-  display: block;
-  background-color: white;
-  width: 2px;
-  height: 100%;
-  position: absolute;
-  top: 0;
+.skillsSubheaderText {
+  font-size: 1.1em;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 16px;
 }
 
 .skillsListRow {
@@ -106,6 +107,157 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+}
+
+.skillsItemContainer {
+  display: flex;
+}
+
+.skillsItem {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4px;
+  padding: 0 9px;
+  position: relative;
+}
+
+.skillsItem:after {
+  content: "";
+  display: block;
+  font-weight: 700;
+  height: 100%;
+  width: 2px;
+  background: rgba(0,0,0,.1);
+  position: absolute;
+  top: 0;
+  right: -1px;
+}
+
+.skillsItemContainer:last-of-type .skillsItem:after {
+  display: none;
+}
+
+/*row one line config*/
+/*line after R*/
+@media only screen and (min-width: 696px) and (max-width: 770px) {
+  #rowOne .skillsItemContainer:nth-child(8) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after python*/
+@media only screen and (min-width: 648px) and (max-width: 695px) {
+  #rowOne .skillsItemContainer:nth-child(7) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after javascript*/
+@media only screen and (min-width: 557px) and (max-width: 647px) {
+  #rowOne .skillsItemContainer:nth-child(6) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after java*/
+@media only screen and (min-width: 448px) and (max-width: 556px) {
+  #rowOne .skillsItemContainer:nth-child(5) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after haskell*/
+@media only screen and (min-width: 380px) and (max-width: 447px) {
+  #rowOne .skillsItemContainer:nth-child(4) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after r again*/
+@media only screen and (min-width: 390px) and (max-width: 447px) {
+  #rowOne .skillsItemContainer:nth-child(8) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after python again*/
+@media only screen and (min-width: 380px) and (max-width: 389px) {
+  #rowOne .skillsItemContainer:nth-child(7) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after javascript again*/
+@media only screen and (min-width: 344px) and (max-width: 379px) {
+  #rowOne .skillsItemContainer:nth-child(6) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after C*/
+@media only screen and (max-width: 379px) {
+  #rowOne .skillsItemContainer:nth-child(3) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after R again*/
+@media only screen and (min-width: 322px) and (max-width: 343px) {
+  #rowOne .skillsItemContainer:nth-child(8) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after java again*/
+@media only screen and (max-width: 343px) {
+  #rowOne .skillsItemContainer:nth-child(5) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after python again*/
+@media only screen and (max-width: 321px) {
+  #rowOne .skillsItemContainer:nth-child(7) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*row two line config*/
+/*line after RN*/
+@media only screen and (min-width: 369px) and (max-width: 464px) {
+  #rowTwo .skillsItemContainer:nth-child(3) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after redux*/
+@media only screen and (max-width: 368px) {
+  #rowTwo .skillsItemContainer:nth-child(2) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*row three line config*/
+/*line after svn*/
+@media only screen and (max-width: 332px) {
+  #rowThree .skillsItemContainer:nth-child(2) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*row four line config*/
+/*line after mongoDB*/
+@media only screen and (min-width: 406px) and (max-width: 495px) {
+  #rowFour .skillsItemContainer:nth-child(2) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after firebase*/
+@media only screen and (max-width: 405px) {
+  #rowFour .skillsItemContainer:nth-child(1) .skillsItem:after {
+    display: none;
+  }
 }
 
 .logoContainer {
@@ -118,25 +270,12 @@
   height: auto;
 }
 
-.skillsSubheaderText {
-  font-size: 1.1em;
-  font-weight: 900;
-  text-align: center;
-  padding-top: 16px;
-}
-
 #experienceHeaderContainer {
   display: flex;
   justify-content: center;
   background-color: #ededed;
   width: 100%;
   padding: 24px 0;
-}
-
-#experienceHeader {
-  font-size: 2.5em;
-  font-weight: 900;
-  padding: 0 24px;
 }
 
 #experienceContainer {
@@ -169,18 +308,8 @@
   text-decoration: none;
 }
 
-.iconContainer {
-  display: flex;
-  align-items: center;
-}
-
-.icon {
-  font-size: 5px;
-  padding: 0 11px;
-}
-
 .linkContainerContent { 
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 900;
   padding: 22px;
   text-align: center;
@@ -244,6 +373,7 @@
   }
   #aboutTextContainer {
     margin-left: 0px;
+    align-self: center;
   }
   #img {
     align-self: center;
@@ -252,51 +382,3 @@
     padding-bottom: 24px;
   }
 }
-
-/*
-@media only screen and (max-width: 845px) {
-  #ruby {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 758px) {
-  #ruby {
-    display: block;
-  }
-  #r {
-    display: none;
-    margin-left: -27px;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  #r {
-    visibility: visible;
-  }
-  #python { 
-    visibility: hidden;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #python { 
-    visibility: visible;
-  }
-  #javascript {
-    visibility: hidden;
-  }
-}
-
-@media only screen and (max-width: 482px) {
-  #javascript {
-    visibility: visible;
-  }
-  #java {
-    visibility: hidden;
-  }
-  #ruby {
-    visibility: hidden;
-  }
-}
-*/

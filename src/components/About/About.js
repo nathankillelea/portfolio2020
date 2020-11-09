@@ -1,8 +1,8 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import styles from './About.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import SharedStyles from '../SharedStyles.module.css';
 
 // FIX RESPONSIVENESS!!!!!!!!!!!
@@ -26,200 +26,177 @@ const About = () => {
         </section>
         <section id={styles.skillsContainer}>
           <div id={styles.skillsHeaderContainer}>
-            <h2 id={styles.skillsHeader} className={styles.selectionText}>Skills and Technologies</h2>
+            <h2 id={styles.skillsHeader}>Skills and Technologies</h2>
           </div>
           <div id={styles.skillsColumnContainer}>
             <div id={styles.rowOne}>
-              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`} style={{paddingTop: 0}}>Languages</h3>
+              <h3 className={styles.skillsSubheaderText} style={{paddingTop: 0}}>Languages</h3>
               <ul className={styles.skillsListRow}>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/HTML5.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/HTML5.png' className={styles.logo} />
+                    </div>
+                    <p>HTML5</p>
                   </div>
-                  <p className={styles.selectionText}>HTML5</p>
                 </li>
-                <div className={styles.iconContainer}>
-                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                </div>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/CSS3.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/CSS3.png' className={styles.logo} />
+                    </div>
+                    <p>CSS3</p>
                   </div>
-                  <p className={styles.selectionText}>CSS3</p>
                 </li>
-                <div className={styles.iconContainer}>
-                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                </div>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/C.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/C.png' className={styles.logo} />
+                    </div>
+                    <p>C</p>
                   </div>
-                  <p className={styles.selectionText}>C</p>
                 </li>
-                <div className={styles.iconContainer}>
-                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                </div>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                   <img src='../../assets/logos/Haskell.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                    <img src='../../assets/logos/Haskell.png' className={styles.logo} />
+                    </div>
+                    <p>Haskell</p>
                   </div>
-                  <p className={styles.selectionText}>Haskell</p>
                 </li>
-                <div style={{display: 'flex'}}>
-                  <div className={styles.iconContainer} className={styles.java}>
-                    <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                  </div>
-                  <li className={styles.skillsItem}>
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
                     <div className={styles.logoContainer}>
                       <img src='../../assets/logos/Java.png' className={styles.logo} />
                     </div>
-                    <p className={styles.selectionText}>Java</p>
-                  </li>
-                </div>
-                <div style={{display: 'flex'}}>
-                  <div className={styles.iconContainer} id={styles.javascript}>
-                    <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                    <p>Java</p>
                   </div>
-                  <li className={styles.skillsItem}>
+                </li>
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
                     <div className={styles.logoContainer}>
                       <img src='../../assets/logos/JavaScript.png' className={styles.logo} />
                     </div>
-                    <p className={styles.selectionText}>Javascript</p>
-                  </li>
-                </div>
-                <div style={{display: 'flex'}}>
-                  <div className={styles.iconContainer} id={styles.python}>
-                    <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                    <p>Javascript</p>
                   </div>
-                  <li className={styles.skillsItem}>
+                </li>
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
                     <div className={styles.logoContainer}>
                       <img src='../../assets/logos/Python.png' className={styles.logo} />
                     </div>
-                    <p className={styles.selectionText}>Python</p>
-                  </li>
-                </div>
-                <div style={{display: 'flex'}}>
-                  <div className={styles.iconContainer} id={styles.r}>
-                    <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                    <p>Python</p>
                   </div>
-                  <li className={styles.skillsItem}>
+                </li>
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
                     <div className={styles.logoContainer}>
                       <img src='../../assets/logos/R.png' className={styles.logo} />
                     </div>
-                    <p className={styles.selectionText}>R</p>
-                  </li>
-                </div>
-                <div style={{display: 'flex'}}>
-                  <div className={styles.iconContainer} id={styles.ruby}>
-                    <FontAwesomeIcon icon={faCircle} className={styles.icon} />
+                    <p>R</p>
                   </div>
-                  <li className={styles.skillsItem}>
+                </li>
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
                     <div className={styles.logoContainer}>
                       <img src='../../assets/logos/Ruby.png' className={styles.logo} />
                     </div>
-                    <p className={styles.selectionText}>Ruby</p>
-                  </li>
-                </div>
+                    <p>Ruby</p>
+                  </div>
+                </li>
               </ul>
             </div>
             <div id={styles.rowTwo}>
-              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Frameworks/Libraries</h3>
+              <h3 className={styles.skillsSubheaderText}>Frameworks/Libraries</h3>
               <ul className={styles.skillsListRow}>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/React.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/React.png' className={styles.logo} />
+                    </div>
+                    <p>React</p>
                   </div>
-                  <p className={styles.selectionText}>React</p>
                 </li>
-                <div className={styles.iconContainer}>
-                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                </div>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Redux.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/Redux.png' className={styles.logo} />
+                    </div>
+                    <p>Redux</p>
                   </div>
-                  <p className={styles.selectionText}>Redux</p>
                 </li>
-                <div className={styles.iconContainer}>
-                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                </div>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/React.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/React.png' className={styles.logo} />
+                    </div>
+                    <p>React Native</p>
                   </div>
-                  <p className={styles.selectionText}>React Native</p>
                 </li>
-                <div className={styles.iconContainer}>
-                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                </div>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Node.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/Node.png' className={styles.logo} />
+                    </div>
+                    <p>Express</p>
                   </div>
-                  <p className={styles.selectionText}>Express</p>
                 </li>
               </ul>
             </div>
             <div id={styles.rowThree}>
-              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Web Technologies</h3>
+              <h3 className={styles.skillsSubheaderText}>Web Technologies</h3>
               <ul className={styles.skillsListRow}>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Git.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/Git.png' className={styles.logo} />
+                    </div>
+                    <p>Git</p>
                   </div>
-                  <p className={styles.selectionText}>Git</p>
                 </li>
-                <div className={styles.iconContainer}>
-                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                </div>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Subversion.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/Subversion.png' className={styles.logo} />
+                    </div>
+                    <p>Subversion</p>
                   </div>
-                  <p className={styles.selectionText}>Subversion</p>
                 </li>
-                <div className={styles.iconContainer}>
-                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                </div>
-                <li className={styles.skillsItem}>
-                  <div className={styles.logoContainer}>
-                    <img src='../../assets/logos/Node.png' className={styles.logo} />
+                <li className={styles.skillsItemContainer}>
+                  <div className={styles.skillsItem}>
+                    <div className={styles.logoContainer}>
+                      <img src='../../assets/logos/Node.png' className={styles.logo} />
+                    </div>
+                    <p>Node</p>
                   </div>
-                  <p className={styles.selectionText}>Node</p>
                 </li>
               </ul>
             </div>
             <div id={styles.rowFour}>
-              <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`}>Databases</h3>
+              <h3 className={styles.skillsSubheaderText}>Databases</h3>
               <ul className={styles.skillsListRow}>
-                <li>
+                <li className={styles.skillsItemContainer}>
                   <div className={styles.skillsItem}>
                     <div className={styles.logoContainer}>
                       <img src='../../assets/logos/Firebase.png' className={styles.logo} />
                     </div>
-                    <p className={styles.selectionText}>Firebase Cloud Firestore</p>
+                    <p>Firebase Cloud Firestore</p>
                   </div>
                 </li>
-                <div className={styles.iconContainer}>
-                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                </div>
-                <li>
+                <li className={styles.skillsItemContainer}>
                   <div className={styles.skillsItem}>
                     <div className={styles.logoContainer}>
                       <img src='../../assets/logos/MongoDB.png' className={styles.logo} />
                     </div>
-                    <p className={styles.selectionText}>MongoDB</p>
+                    <p>MongoDB</p>
                   </div>
                 </li>
-                <div className={styles.iconContainer}>
-                  <FontAwesomeIcon icon={faCircle} className={styles.icon} />
-                </div>
-                <li>
+                <li className={styles.skillsItemContainer}>
                   <div className={styles.skillsItem}>
                     <div className={styles.logoContainer}>
                       <img src='../../assets/logos/MySQL.png' className={styles.logo} />
                     </div>
-                    <p className={styles.selectionText}>MySQL</p>
+                    <p>MySQL</p>
                   </div>
                 </li>
               </ul>
@@ -235,7 +212,7 @@ const About = () => {
               <div className={styles.experienceItemTitleContainer}>
                 <h3>⚕️ Epic Systems</h3>
                 <h4>Software Developer</h4>
-                <h4>2018-2019</h4>
+                <h4>2018 - 2019</h4>
               </div>
               <ul className={styles.experienceItemInfoContainer}>
                 <li className={styles.experienceListItem}><p>Solved high priority, regulatory issues critical to customers' financial success</p></li>
@@ -248,7 +225,7 @@ const About = () => {
               <div className={styles.experienceItemTitleContainer}>
                 <h3>📙 University of Illinois at Urbana-Champaign</h3>
                 <h4>Computer Science</h4>
-                <h4>2016-2018</h4>
+                <h4>2016 - 2018</h4>
               </div>
               <ul className={styles.experienceItemInfoContainer}>
                 <li className={styles.experienceListItem}><p>Graduated with a 3.44 GPA</p></li>
@@ -261,7 +238,7 @@ const About = () => {
               <div className={styles.experienceItemTitleContainer}>
                 <h3>🏫 Illinois Valley Community College</h3>
                 <h4>Associate of Engineering Science</h4>
-                <h4>2014-2016</h4>
+                <h4>2014 - 2016</h4>
               </div>
               <ul className={styles.experienceItemInfoContainer}>
                 <li className={styles.experienceListItem}><p>Graduated with a 3.89 GPA</p></li>
@@ -272,15 +249,17 @@ const About = () => {
             </div>
           </div>
         </section>
-        <a href='../../assets/resume.pdf' className={styles.linkContainer}>
-          <h2 className={styles.linkContainerContent}>download my resume</h2>
-        </a>
-        <a href='mailto:nathan.killelea@gmail.com' className={styles.linkContainer}>
-          <h2 className={styles.linkContainerContent}>hire me</h2>
-        </a>
-        <a href='https://www.linkedin.com/in/killelea/' className={styles.linkContainer}>
-          <h2 className={styles.linkContainerContent}>connect with me</h2>
-        </a>
+        <section>
+          <a href='../../assets/resume.pdf' className={styles.linkContainer}>
+            <h2 className={styles.linkContainerContent}>download my resume</h2>
+          </a>
+          <a href='mailto:nathan.killelea@gmail.com' className={styles.linkContainer}>
+            <h2 className={styles.linkContainerContent}>hire me</h2>
+          </a>
+          <a href='https://www.linkedin.com/in/killelea/' className={styles.linkContainer}>
+            <h2 className={styles.linkContainerContent}>connect with me</h2>
+          </a>
+        </section>
       </div>
     </div>
   );
