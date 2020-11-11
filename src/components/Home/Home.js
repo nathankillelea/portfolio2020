@@ -19,6 +19,7 @@ const Home = () => {
             backgroundColor='rgba(229, 70, 31, 0.5)'
             description='College event finder'
             tags={['JavaScript', 'React Native', 'Redux']}
+            alt={'Illini Events Design'}
           />
           <Card
             title={"Emmy's Doodles"}
@@ -27,22 +28,7 @@ const Home = () => {
             backgroundColor='rgba(244, 219, 155, 0.5)'
             description='E-commerce website for goldendoodle stickers'
             tags={['JavaScript', 'React', 'Redux', 'Firebase']}
-          />
-          <Card
-            title={'Browser Game'}
-            link={'/browser-game'}
-            img={'../../assets/browser_game.jpg'}
-            backgroundColor='rgba(150, 191, 206, 0.5)'
-            description='Browser-based survival game'
-            tags={['JavaScript', 'HTML5', 'Canvas']}
-          />
-          <Card
-            title={'Message in a Bottle'}
-            link={'/message-in-a-bottle'}
-            img={'../../assets/message_in_a_bottle.jpg'}
-            backgroundColor='rgba(150, 206, 180, 0.5)'
-            description='Motivational task management'
-            tags={['JavaScript', 'React Native', 'Node.js', 'Express', 'MongoDB']}
+            alt={"Emmy's Doodles Graphic"}
           />
           <Card
             title={'Fanchat'}
@@ -51,6 +37,25 @@ const Home = () => {
             backgroundColor='rgba(255, 32, 32, 0.5)'
             description='Subscription-based chatting'
             tags={['Javascript', 'React Native Web', 'Firebase', 'Redux']}
+            alt={'Fanchat App'}
+          />
+          <Card
+            title={'Message in a Bottle'}
+            link={'/message-in-a-bottle'}
+            img={'../../assets/message_in_a_bottle.jpg'}
+            backgroundColor='rgba(150, 206, 180, 0.5)'
+            description='Motivational task management'
+            tags={['JavaScript', 'React Native', 'Node.js', 'Express', 'MongoDB']}
+            alt={'Message in a Bottle Logo'}
+          />
+          <Card
+            title={'Zombie Survival'}
+            link={'/zombie-survival'}
+            img={'../../assets/browser_game.jpg'}
+            backgroundColor='rgba(150, 191, 206, 0.5)'
+            description='Browser-based survival game'
+            tags={['JavaScript', 'HTML5', 'Canvas']}
+            alt={'Hand on keyboard'}
           />
         </section>
       </div>

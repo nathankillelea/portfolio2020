@@ -1,15 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useWindowWidth } from '@react-hook/window-size'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { animated, useSpring } from 'react-spring';
 import styles from './Header.module.css';
-
-import { animated, useSpring, useTransition, useChain } from 'react-spring';
-
-// MAYBE I PUT THE USE STATE OPEN SHIT ON APP, THEN I CAN INTERPOLATE THE CONTENT DOWN AS WELL ON PRESS ??????
-
-// MAYBE I CAN MAKE IT NOT TRANSPARENT AND BE A TRANSITION FROM THE TOP OR BOTTOM OF THE SCREEN (THE BURGER THAT IS)
 
 const Header = ({open, setOpen, width}) => {
   const props = useSpring({x: open ? 0 : 100});

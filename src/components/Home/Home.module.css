@@ -18,6 +18,7 @@
 #subtitleText {
   font-family: 'Markazi Text', serif;
   font-size: 5em;
+  line-height: 1.1;
 }
 
 #projects {
@@ -35,16 +36,46 @@
   margin-bottom: 48px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1022px) {
   #subtitle {
     margin: 112px auto;
   }
 }
 
-/*
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 565px) {
   #subtitleText {
-    font-size: 3.5rem;
+    font-size: 4em;
   }
 }
-*/
+
+@media only screen and (max-width: 565px) {
+  #subtitleText {
+    font-size: 4em;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #subtitleText {
+    font-size: 3.5em;
+  }
+}
+
+@media only screen and (max-width: 408px) {
+  #subtitleText {
+    font-size: 3em;
+  }
+  #projectsText {
+    font-size: 1.4em;
+    margin-bottom: 18px;
+  }
+}
+
+@media only screen and (max-width: 356px) {
+  #subtitleText {
+    font-size: 2.5em;
+  }
+  #projectsText {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+  }
+}

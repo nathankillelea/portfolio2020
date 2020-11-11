@@ -34,7 +34,7 @@
 
 .projectInfo {
   font-size: 1em;
-  color: gray;
+  color: #6c6c6c;
   max-width: 600px;
   text-align: center;
   margin-top: 22px;
@@ -43,7 +43,7 @@
 .projectDesign {
   font-size: 2em;
   font-weight: 900;
-  color: gray;
+  color: #6c6c6c;
   padding: 24px 24px;
 }
 
@@ -62,10 +62,26 @@
   flex-shrink: 0;
 }
 
+.projectSourceButton:active {
+  opacity: 0.5;
+}
+
 .tagContainer {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   margin-top: 24px;
   max-width: 600px;
   align-items: center;
+  justify-content: center;
+}
+
+.tagText {
+  margin: 12px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .projectHeader {
+    font-size: 3em;
+  }
 }

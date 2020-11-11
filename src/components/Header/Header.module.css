@@ -71,7 +71,7 @@
   top: 100%;
   width: 0;
   height: 3px;
-  background-color: #2BBFBD;
+  background-color: #F3C13A;
   transition: width .2s ease-in-out;
 }
 
@@ -104,5 +104,5 @@
 }
 
 .mobileNavText:hover {
-  color: #2BBFBD !important;
+  color: #F3C13A !important;
 }

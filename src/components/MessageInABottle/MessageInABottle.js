@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './MessageInABottle.module.css';
 import SharedStyles from '../SharedStyles.module.css';
 
@@ -17,15 +17,15 @@ const MessageInABottle = () => {
             <a href='https://github.com/nathankillelea/CS498RK-Final-Project' className={SharedStyles.projectSourceButton} style={{backgroundColor: 'rgba(150, 206, 180)'}} target='_blank' rel='noopener noreferrer'>
               <h4 style={{fontWeight: '600'}}>Source Code</h4>
             </a>
-            <h4 style={{padding: '4px 12px',}}><strong style={{color: 'rgba(150, 206, 180)', fontWeight: 600}}>Tech</strong><span style={{fontWeight: 600}}> MongoDB, Express, React Native, Node</span></h4>
+            <h4 className={SharedStyles.tagText}><strong style={{color: 'rgba(150, 206, 180)', fontWeight: 600}}>Tech</strong><span style={{fontWeight: 600}}> MongoDB, Express, React Native, Node</span></h4>
           </div>
         </section>
         <h3 className={SharedStyles.projectDesign}>Design</h3>
         <div className={SharedStyles.projectImageRowContainer}>
-          <img src='../../assets/message_in_a_bottle_row_1.jpg' className={styles.image} />
+          <img src='../../assets/message_in_a_bottle_row_1.jpg' className={styles.image} alt='Message In A Bottle Design' />
         </div>
       </div>
-      <ProjectsNav previous='/browser-game' next='/fanchat' />
+      <ProjectsNav previous='/fanchat' next='/zombie-survival' />
     </div>
   );
 }

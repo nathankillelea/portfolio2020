@@ -5,8 +5,6 @@ import SharedStyles from '../SharedStyles.module.css';
 import ProjectsNav from '../ProjectsNav/ProjectsNav.js';
 
 const Fanchat = () => {
-  //'rgba(255, 32, 32)'
-  // React Native Web, Redux, Firebase
   return (
     <div id={SharedStyles.container}>
       <div id={styles.body}>
@@ -19,15 +17,15 @@ const Fanchat = () => {
             <a href='http://fanchat.me' className={SharedStyles.projectSourceButton} style={{backgroundColor: 'rgba(255, 32, 32)'}} target='_blank' rel='noopener noreferrer'>
               <h4 style={{fontWeight: '600'}}>Website</h4>
             </a>
-            <h4 style={{padding: '4px 12px',}}><strong style={{color: 'rgba(255, 32, 32)', fontWeight: 600}}>Tech</strong><span style={{fontWeight: 600}}> React Native Web, Redux, Firebase, Stripe API</span></h4>
+            <h4 className={SharedStyles.tagText}><strong style={{color: 'rgba(255, 32, 32)', fontWeight: 600}}>Tech</strong><span style={{fontWeight: 600}}> React Native Web, Redux, Firebase, Stripe API</span></h4>
           </div>
         </section>
         <h3 className={SharedStyles.projectDesign}>Design</h3>
         <div className={SharedStyles.projectImageRowContainer}>
-          <img src='../../assets/fanchat_row_1.jpg' className={styles.image} />
+          <img src='../../assets/fanchat_row_1.jpg' className={styles.image} alt='Fanchat Design' />
         </div>
       </div>
-      <ProjectsNav previous='/message-in-a-bottle' next='/illini-events' />
+      <ProjectsNav previous='/emmys-doodles' next='/message-in-a-bottle' />
     </div>
   );
 }
