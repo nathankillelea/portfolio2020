@@ -252,7 +252,7 @@ const About = () => {
             </div>
           </section>
           <section id={styles.linksContainer}>
-            <a href='../../assets/resume.pdf' className={styles.link} style={{flex: '1 1 auto'}}>
+            <a href='../../assets/nathan-killelea-resume.pdf' className={styles.link} style={{flex: '1 1 auto'}}>
               <div className={styles.linkContainer} style={{backgroundColor: '#ededed'}}>
                 {pageIsVisible && (
                   <Ticker speed='6'>
