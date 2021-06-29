@@ -140,107 +140,106 @@
 }
 
 /*row one line config*/
-/*line after R*/
-@media only screen and (min-width: 696px) and (max-width: 770px) {
-  #rowOne .skillsItemContainer:nth-child(8) .skillsItem:after {
-    display: none;
-  }
-}
-
-/*line after python*/
-@media only screen and (min-width: 648px) and (max-width: 695px) {
-  #rowOne .skillsItemContainer:nth-child(7) .skillsItem:after {
-    display: none;
-  }
-}
-
-/*line after javascript*/
-@media only screen and (min-width: 557px) and (max-width: 647px) {
+/*line after Java*/
+@media only screen and (min-width: 638px) and (max-width: 727px) {
   #rowOne .skillsItemContainer:nth-child(6) .skillsItem:after {
     display: none;
   }
 }
 
-/*line after java*/
-@media only screen and (min-width: 448px) and (max-width: 556px) {
+/*line after GraphQL*/
+@media only screen and (min-width: 570px) and (max-width: 637px) {
   #rowOne .skillsItemContainer:nth-child(5) .skillsItem:after {
     display: none;
   }
 }
 
-/*line after haskell*/
-@media only screen and (min-width: 380px) and (max-width: 447px) {
+/*line after CSS3*/
+@media only screen and (min-width: 464px) and (max-width: 569px) {
   #rowOne .skillsItemContainer:nth-child(4) .skillsItem:after {
     display: none;
   }
 }
 
-/*line after r again*/
-@media only screen and (min-width: 390px) and (max-width: 447px) {
-  #rowOne .skillsItemContainer:nth-child(8) .skillsItem:after {
-    display: none;
-  }
-}
-
-/*line after python again*/
-@media only screen and (min-width: 380px) and (max-width: 389px) {
-  #rowOne .skillsItemContainer:nth-child(7) .skillsItem:after {
-    display: none;
-  }
-}
-
-/*line after javascript again*/
-@media only screen and (min-width: 344px) and (max-width: 379px) {
-  #rowOne .skillsItemContainer:nth-child(6) .skillsItem:after {
-    display: none;
-  }
-}
-
-/*line after C*/
-@media only screen and (max-width: 379px) {
+/*line after HTML5*/
+@media only screen and (min-width: 389px) and (max-width: 463px) {
   #rowOne .skillsItemContainer:nth-child(3) .skillsItem:after {
     display: none;
   }
 }
 
-/*line after R again*/
-@media only screen and (min-width: 322px) and (max-width: 343px) {
-  #rowOne .skillsItemContainer:nth-child(8) .skillsItem:after {
+/*line after Java again*/
+@media only screen and (min-width: 389px) and (max-width: 413px) {
+  #rowOne .skillsItemContainer:nth-child(6) .skillsItem:after {
     display: none;
   }
 }
 
-/*line after java again*/
-@media only screen and (max-width: 343px) {
+/*line after GraphQL again*/
+@media only screen and (min-width: 345px) and (max-width: 388px) {
   #rowOne .skillsItemContainer:nth-child(5) .skillsItem:after {
     display: none;
   }
 }
 
-/*line after python again*/
-@media only screen and (max-width: 321px) {
-  #rowOne .skillsItemContainer:nth-child(7) .skillsItem:after {
+/*line after Typescript*/
+@media only screen and (max-width: 388px) {
+  #rowOne .skillsItemContainer:nth-child(2) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after CSS3 again*/
+@media only screen and (max-width: 344px) {
+  #rowOne .skillsItemContainer:nth-child(4) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after Java again again*/
+@media only screen and (max-width: 338px) {
+  #rowOne .skillsItemContainer:nth-child(6) .skillsItem:after {
     display: none;
   }
 }
 
 /*row two line config*/
 /*line after RN*/
-@media only screen and (min-width: 369px) and (max-width: 464px) {
-  #rowTwo .skillsItemContainer:nth-child(3) .skillsItem:after {
+@media only screen and (min-width: 451px) and (max-width: 546px) {
+  #rowTwo .skillsItemContainer:nth-child(4) .skillsItem:after {
     display: none;
   }
 }
 
 /*line after redux*/
-@media only screen and (max-width: 368px) {
+@media only screen and (min-width: 321px) and (max-width: 450px) {
+  #rowTwo .skillsItemContainer:nth-child(3) .skillsItem:after {
+    display: none;
+  }
+}
+
+/*line after recoil*/
+@media only screen and (max-width: 320px) {
   #rowTwo .skillsItemContainer:nth-child(2) .skillsItem:after {
     display: none;
   }
 }
 
+/*line after RN again*/
+@media only screen and (max-width: 320px) {
+  #rowTwo .skillsItemContainer:nth-child(4) .skillsItem:after {
+    display: none;
+  }
+}
+
 /*row three line config*/
-/*line after svn*/
+/*line after jira*/
+@media only screen and (min-width: 333px) and (max-width: 394px) {
+  #rowThree .skillsItemContainer:nth-child(3) .skillsItem:after {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 332px) {
   #rowThree .skillsItemContainer:nth-child(2) .skillsItem:after {
     display: none;

@@ -21,8 +21,8 @@ const About = () => {
             </div>
             <div id={styles.aboutTextContainer}>
               <h2 id={styles.aboutHeader} className={styles.selectionText}>Hey, I'm Nathan Killelea.</h2>
-              <p className={styles.selectionText} style={{paddingTop: '24px'}}>I am a software developer with a passion for all things web. I am a graduate from the College of Engineering at the University of Illinois at Urbana-Champaign.</p>
-              <p className={styles.selectionText} style={{paddingTop: '24px'}}>I love using modern frameworks and technologies to create simple, elegant web solutions. I am always learning and trying to improve my skills as a developer. I may not know everything, but I am uniquely determined and capable of figuring out creative solutions to any problem that I come across.</p>
+              <p className={styles.selectionText} style={{paddingTop: '24px'}}>I am a software developer with a passion for all things web; I have four years worth of development experience with a focus on the front end.</p>
+              <p className={styles.selectionText} style={{paddingTop: '24px'}}>I love using modern frameworks and technologies to create simple, elegant web solutions. I am always learning and trying to improve my skills as a developer. Nobody can know everything, but I am uniquely determined and capable of figuring out creative solutions to any problem that I come across.</p>
               <p className={styles.selectionText} style={{paddingTop: '24px'}}>I am currently open to full-time, part-time, or freelance opportunities.</p>
             </div>
           </section>
@@ -34,6 +34,22 @@ const About = () => {
               <div id={styles.rowOne}>
                 <h3 className={`${styles.skillsSubheaderText} ${styles.selectionText}`} style={{paddingTop: 0}}>Languages</h3>
                 <ul className={styles.skillsListRow}>
+                  <li className={styles.skillsItemContainer}>
+                    <div className={styles.skillsItem}>
+                      <div className={styles.logoContainer}>
+                        <img src='../../assets/logos/JavaScript.png' className={`${styles.logo} ${styles.selectionText}`} alt='Javascript Logo' />
+                      </div>
+                      <p className={styles.selectionText}>Javascript</p>
+                    </div>
+                  </li>
+                  <li className={styles.skillsItemContainer}>
+                    <div className={styles.skillsItem}>
+                      <div className={styles.logoContainer}>
+                        <img src='../../assets/logos/TypeScript.png' className={`${styles.logo} ${styles.selectionText}`} alt='Typescript Logo' />
+                      </div>
+                      <p className={styles.selectionText}>Typescript</p>
+                    </div>
+                  </li>
                   <li className={styles.skillsItemContainer}>
                     <div className={styles.skillsItem}>
                       <div className={styles.logoContainer}>
@@ -53,17 +69,9 @@ const About = () => {
                   <li className={styles.skillsItemContainer}>
                     <div className={styles.skillsItem}>
                       <div className={styles.logoContainer}>
-                        <img src='../../assets/logos/C.png' className={`${styles.logo} ${styles.selectionText}`} alt='C Logo' />
+                        <img src='../../assets/logos/GraphQL.png' className={`${styles.logo} ${styles.selectionText}`} alt='GraphQL Logo' />
                       </div>
-                      <p className={styles.selectionText}>C</p>
-                    </div>
-                  </li>
-                  <li className={styles.skillsItemContainer}>
-                    <div className={styles.skillsItem}>
-                      <div className={styles.logoContainer}>
-                      <img src='../../assets/logos/Haskell.png' className={`${styles.logo} ${styles.selectionText}`} alt='Haskell Logo' />
-                      </div>
-                      <p className={styles.selectionText}>Haskell</p>
+                      <p className={styles.selectionText}>GraphQL</p>
                     </div>
                   </li>
                   <li className={styles.skillsItemContainer}>
@@ -77,33 +85,9 @@ const About = () => {
                   <li className={styles.skillsItemContainer}>
                     <div className={styles.skillsItem}>
                       <div className={styles.logoContainer}>
-                        <img src='../../assets/logos/JavaScript.png' className={`${styles.logo} ${styles.selectionText}`} alt='Javascript Logo' />
-                      </div>
-                      <p className={styles.selectionText}>Javascript</p>
-                    </div>
-                  </li>
-                  <li className={styles.skillsItemContainer}>
-                    <div className={styles.skillsItem}>
-                      <div className={styles.logoContainer}>
                         <img src='../../assets/logos/Python.png' className={`${styles.logo} ${styles.selectionText}`} alt='Python Logo' />
                       </div>
                       <p className={styles.selectionText}>Python</p>
-                    </div>
-                  </li>
-                  <li className={styles.skillsItemContainer}>
-                    <div className={styles.skillsItem}>
-                      <div className={styles.logoContainer}>
-                        <img src='../../assets/logos/R.png' className={`${styles.logo} ${styles.selectionText}`} alt='R Logo' />
-                      </div>
-                      <p className={styles.selectionText}>R</p>
-                    </div>
-                  </li>
-                  <li className={styles.skillsItemContainer}>
-                    <div className={styles.skillsItem}>
-                      <div className={styles.logoContainer}>
-                        <img src='../../assets/logos/Ruby.png' className={`${styles.logo} ${styles.selectionText}`} alt='Ruby Logo' />
-                      </div>
-                      <p className={styles.selectionText}>Ruby</p>
                     </div>
                   </li>
                 </ul>
@@ -117,6 +101,14 @@ const About = () => {
                         <img src='../../assets/logos/React.png' className={`${styles.logo} ${styles.selectionText}`} alt='React Logo' />
                       </div>
                       <p className={styles.selectionText}>React</p>
+                    </div>
+                  </li>
+                  <li className={styles.skillsItemContainer}>
+                    <div className={styles.skillsItem}>
+                      <div className={styles.logoContainer}>
+                        <img src='../../assets/logos/Recoil.png' className={`${styles.logo} ${styles.selectionText}`} alt='Recoil Logo' />
+                      </div>
+                      <p className={styles.selectionText}>Recoil</p>
                     </div>
                   </li>
                   <li className={styles.skillsItemContainer}>
@@ -172,6 +164,14 @@ const About = () => {
                       <p className={styles.selectionText}>Node</p>
                     </div>
                   </li>
+                  <li className={styles.skillsItemContainer}>
+                    <div className={styles.skillsItem}>
+                      <div className={styles.logoContainer}>
+                        <img src='../../assets/logos/Jira.png' className={`${styles.logo} ${styles.selectionText}`} alt='Jira Logo' />
+                      </div>
+                      <p className={styles.selectionText}>Jira</p>
+                    </div>
+                  </li>
                 </ul>
               </div>
               <div id={styles.rowFour}>
@@ -210,9 +210,22 @@ const About = () => {
               <h2 id={styles.experienceHeader}><span style={{color: '#3f3f3f', fontWeight: '900'}}>Experience</span> and Education</h2>
             </div>
             <div id={styles.experienceContentContainer}>
+            <div className={styles.experienceItemContainer}>
+              <div className={styles.experienceItemTitleContainer}>
+                <span className={styles.experienceItemTitleRow} style={{color: '#3f3f3f', marginBottom: '8px'}}><img src='../../assets/laptop.svg' className={styles.experienceItemIconLarge} alt='laptop' /><h3 className={styles.experienceItemSubtitle}>Greetly</h3></span>
+                <span className={styles.experienceItemTitleRow} style={{color: '#3f3f3f', marginBottom: '4px'}}><img src='../../assets/bust_in_silhouette.svg' className={styles.experienceItemIconSmall} alt='bust in silhouette' /><h4>Front End Engineer</h4></span>
+                <span className={styles.experienceItemTitleRow} style={{color: '#3f3f3f'}}><img src='../../assets/calendar_spiral.svg' className={styles.experienceItemIconSmall} alt='calendar' /><h4>2021 - Present</h4></span>
+              </div>
+                <ul className={styles.experienceItemInfoContainer}>
+                  <li className={styles.experienceListItem}><p>Worked on rebuilding the Greetly app with a more modern tech stack</p></li>
+                  <li className={styles.experienceListItem}><p>Provided critical support and development on a project for an important government contract</p></li>
+                  <li className={styles.experienceListItem}><p>Followed an agile methodology for development</p></li>
+                  <li className={styles.experienceListItem}><p>Developed in React, Typescript, and GraphQL</p></li>
+                </ul>
+              </div>
               <div className={styles.experienceItemContainer}>
                 <div className={styles.experienceItemTitleContainer}>
-                  <span className={styles.experienceItemTitleRow} style={{color: '#3f3f3f', marginBottom: '8px'}}><img src='../../assets/laptop.svg' className={styles.experienceItemIconLarge} alt='laptop' /><h3 className={styles.experienceItemSubtitle}>Epic Systems</h3></span>
+                  <span className={styles.experienceItemTitleRow} style={{color: '#3f3f3f', marginBottom: '8px'}}><img src='../../assets/red_heart.svg' className={styles.experienceItemIconLarge} alt='red-heart' /><h3 className={styles.experienceItemSubtitle}>Epic Systems</h3></span>
                   <span className={styles.experienceItemTitleRow} style={{color: '#3f3f3f', marginBottom: '4px'}}><img src='../../assets/bust_in_silhouette.svg' className={styles.experienceItemIconSmall} alt='bust in silhouette' /><h4>Software Developer</h4></span>
                   <span className={styles.experienceItemTitleRow} style={{color: '#3f3f3f'}}><img src='../../assets/calendar_spiral.svg' className={styles.experienceItemIconSmall} alt='calendar' /><h4>2018 - 2019</h4></span>
                 </div>
